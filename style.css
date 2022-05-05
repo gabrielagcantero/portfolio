@@ -120,6 +120,7 @@ article{
     display: flex;
     border: solid 1px aliceblue;
     border-radius: 20px;
+    align-items: center;
 }
 
 .desc{
@@ -131,6 +132,17 @@ article{
     padding: 20px;
 }
 
-iframe{
+iframe, .gif{
+    border-radius: 20px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.gifContainer{
+    display: flex;
+    justify-content: center;
+    border: solid 1px aliceblue;
     border-radius: 20px;
 }
