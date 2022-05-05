@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgba(177, 75, 250, .6);
+}
+
+p{
+    color:aliceblue;
+}
+
+h1{
+    color:midnightblue;
+}
+
+h3, h4{
+    color:darkslateblue;
+}
+
+header{
+    margin-left: 15px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+div{
+    padding: 10px;
+}
+
+.logoAP{
+    height: 100px;
+}
+
+.icon{
+    height: 50px;
+    border-radius: 15px;
+}
+
+.icon2{
+    height: 25px;
+    border-radius: 10px;
+}
+
+#banner{
+    width: 100%;
+    opacity: .8;
+    border: solid 1px aliceblue;
+    border-radius: 20px;
+    
+}
+aside{
+    position: relative;
+    top: -150px;
+    left: 40px;
+}
+
+#miFoto{
+    width: 200px;
+    border-radius: 50%;
+    border: solid 2px midnightblue;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.logo{
+    height: 100px;
+    border-radius: 50%;
+}
+
+section{
+    width: 95%;
+    padding: 20px;
+    margin: 0px auto 20px;
+    border-radius: 10px;
+    background-color: rgba(133, 132, 138, .5);
+}
+
+article{
+    padding: 10px;
+    margin: 10px;
+}
+
+.sobreMi{
+    margin: -350px 10px 10px 250px;
+    padding: 10px 10px 50px 10px;
+}
+
+.bio{
+    background-color: rgba(133, 132, 138, .5); 
+    border-radius: 20px;
+    border: solid 1px aliceblue;
+}
+
+.contact{
+    display: block;
+}
+
+.data{
+    display: flex;
+}
+
+#mail, #tel, #dir{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.art{
+    display: flex;
+    border: solid 1px aliceblue;
+    border-radius: 20px;
+}
+
+.desc{
+    width: 60%;
+    padding: 20px;
+}
+
+.info{
+    padding: 20px;
+}
+
+iframe{
+    border-radius: 20px;
+}
