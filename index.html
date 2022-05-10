@@ -3,181 +3,192 @@
     <head>
         <meta charset="utf-8">
         <title>Gabriela Cantero - Portfolio</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <header>
-            <div class="header">
-                <!-- cambiar links de las imagenes-->
-                <img src="img/APLogo.png" alt="Logo Argentina Programa" class="logoAP">
-                <p>#YoProgamo </p> 
-            </div>
-            <div class="redes">
-                <a href="https://www.linkedin.com/in/gabrielagcantero"><img src="img/lnIcon.jpg" alt="Facebook" class="icon"></a>
-                <a href="https://www.github.com/gabrielagcantero"><img src="img/ghIcon.jpg" alt="GitHub" class="icon"></a>
-                <a href="https://www.facebook.com/amyleemonroe"><img src="img/fbIcon.jpg" alt="Linkedin" class="icon"></a>
-            </div>
-        </header>
+        <div class="container-lg">
+            <header class="row justify-content-between align-items-center">
+                    <div class="col-4 header">
+                        <!-- cambiar links de las imagenes-->
+                        <img src="img/APLogo.png" alt="Logo Argentina Programa" class="logoAP">
+                        <p>#YoProgamo </p> 
+                    </div>
+                    <div class="col-4 redes">
+                        <a href="https://www.linkedin.com/in/gabrielagcantero"><img src="img/lnIcon.jpg" alt="Facebook" class="icon"></a>
+                        <a href="https://www.github.com/gabrielagcantero"><img src="img/ghIcon.jpg" alt="GitHub" class="icon"></a>
+                        <a href="https://www.facebook.com/amyleemonroe"><img src="img/fbIcon.jpg" alt="Linkedin" class="icon"></a>
+                    </div>
+            </header>
 
-        <section>
-            <img src="img/banner.jpg" alt="Banner con libro" id="banner">
-            <aside>
-                <img src="img/foto.jpg" alt="Mi foto" id="miFoto">
-                <h1> Gabriela Cantero </h1>
-                <h3> Desarrolladora Web <br> Full Stack Jr. </h3>
-            </aside>
-            <article class="sobreMi title">
-                <div class="bio">
-                    <h4>Sobre mi</h4>
-                    <p>
-                        Soy una desarrolladora jr. en busca de mi primer empleo en este área. 
-                        He tomado algunos cursos de desarrollo y actualmente estoy cursando la carrera de Analista
-                        Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.
-                    </p>
-                </div>
-                <div class="contact">
-                    <h4> Información de contacto </h4>
-                    <div class="data">
-                        <p id="mail"><img src="img/mail.png" class="icon2">gabrielagcantero@gmail.com</p>
-                        <P id="tel"><img src="img/tel.png" class="icon2"> +54 9 11 39475470</P>
-                        <p id="dir"><img src="img/lugar.png" class="icon2">Gonnet, Bs. As.</p>
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/banner.jpg" alt="Banner con libro" id="banner">
                     </div>
                 </div>
-            </article>
-        </section>
+                <div class="row">
+                    <aside class="col-4">
+                        <img src="img/foto.jpg" alt="Mi foto" id="miFoto">
+                        <h1> Gabriela Cantero </h1>
+                        <h3> Desarrolladora Web <br> Full Stack Jr. </h3>
+                    </aside>
+                <!--<div class="row justify-content-end">-->
+                    <article class="col-lg-8 ms-auto sobreMi title">
+                        <div class="bio">
+                            <h4>Sobre mi</h4>
+                            <p>
+                                Soy una desarrolladora jr. en busca de mi primer empleo en este área. 
+                                He tomado algunos cursos de desarrollo y actualmente estoy cursando la carrera de Analista
+                                Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.
+                            </p>
+                        </div>
+                        <div class="contact">
+                            <h4> Información de contacto </h4>
+                            <div class="data">
+                                <p id="mail"><img src="img/mail.png" class="icon2">gabrielagcantero@gmail.com</p>
+                                <P id="tel"><img src="img/tel.png" class="icon2"> +54 9 11 39475470</P>
+                                <p id="dir"><img src="img/lugar.png" class="icon2">Gonnet, Bs. As.</p>
+                            </div>
+                        </div>
+                    </article>
+                <!--</div>-->
+            </section>
 
-        <section>
-            <h3>Últimas Experiencias Laborales</h3>
-            <article class="art">
-                <img src="img/violetta.jpg" class="logo">
-                <div class="info">
-                    <p class="title">Violetta Cosméticos</p>
-                    <p>Julio 2017 - Marzo 2018</p> <!--chequear fechas -->
-                    <p>Secretaria de Gerencia</p>
-                    <p>Tareas administrativas, asistencia a gerentes, atención telefónica, presentaciones.</p>
+            <section>
+                <h3>Últimas Experiencias Laborales</h3>
+                <article class="art">
+                    <img src="img/violetta.jpg" class="logo">
+                    <div class="info">
+                        <p class="title">Violetta Cosméticos</p>
+                        <p>Julio 2017 - Marzo 2018</p> <!--chequear fechas -->
+                        <p>Secretaria de Gerencia</p>
+                        <p>Tareas administrativas, asistencia a gerentes, atención telefónica, presentaciones.</p>
+                    </div>
+                </article>
+
+                <article class="art">
+                    <img src="img/europ.png" class="logo">
+                    <div class="info">
+                        <p class="title">Europ Assistance</p>
+                        <p>Noviembre 2016 - Febero 2017</p>
+                        <p>Operador técnico telefónico</p>
+                        <p>Atención telefónica de emergencias automotrices, contención de socios, control de demora.</p>
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <h3>Educacion Formal</h3>
+                <article class="art">
+                    <img src="img/unlp.png" class="logo">
+                    <div class="info">
+                        <p class="title">Universidad Nacional de La Plata</p>
+                        <p>Enero 2021 - En curso</p>
+                        <p>Analista Programador Universitario</p>
+                        <p>8.75</p>
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <h3>Cursos</h3>
+                <article class="art">
+                    <img src="img/ibmSB.png" class="logo">
+                    <div class="info">
+                        <p class="title">IBM Skills Build - Codo a Codo</p>
+                        <p>Sptiembre 2021 - En curso</p>
+                        <p>Especialización en Desarrollo Mobile</p>
+                    </div>
+                </article>
+
+                <article class="art">
+                    <img src="img/APLogo.png" class="logo">
+                    <div class="info">
+                        <p class="title">Argentina Programa</p>
+                        <p>Noviembre 2021 - Mayo 2022</p>
+                        <p>Tramo 2 - #YoProgramo</p>
+                    </div>
+                </article>            
+
+                <article class="art">
+                    <img src="img/APLogo.png" class="logo">
+                    <div class="info">
+                        <p class="title">Argentina Programa</p>
+                        <p>Noviembre 2020 - Diciembre 2020</p>
+                        <p>Tramo 1 - #SeProgramar</p>
+                    </div>
+                </article>
+
+                <article class="art">
+                    <img src="img/cac.png" class="logo">
+                    <div class="info">
+                        <p class="title">Codo a Codo</p>
+                        <p>Agosto 2020 - Diciembre 2020</p>
+                        <p>Python Full Stack</p>
+                    </div>
+                </article>
+
+                <article class="art">
+                    <img src="img/cac.png" class="logo">
+                    <div class="info">
+                        <p class="title">Codo a Codo</p>
+                        <p>Marzo 2019 - Diciembre 2019</p>
+                        <p>Testing Manual y Automatizado</p>
+                    </div>
+                </article>
+
+                <article class="art">
+                    <img src="img/cac.png" class="logo">
+                    <div class="info">
+                        <p class="title">Codo a Codo</p>
+                        <p>Marzo 2018 - Diciembre 2018</p>
+                        <p>Programación en JAVA</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="skills">
+                <h3>Hard & Soft Skills</h3>
+                <div class="gifContainer">
+                    <img src="img/Habilidades.gif" alt="" class="gif">
                 </div>
-            </article>
+            </section>
 
-            <article class="art">
-                <img src="img/europ.png" class="logo">
-                <div class="info">
-                    <p class="title">Europ Assistance</p>
-                    <p>Noviembre 2016 - Febero 2017</p>
-                    <p>Operador técnico telefónico</p>
-                    <p>Atención telefónica de emergencias automotrices, contención de socios, control de demora.</p>
-                </div>
-            </article>
-        </section>
+            <section class="proyectos">
+                <h3>Proyectos</h3>
+                <article class="art">
+                    <iframe 
+                        src="https://happy-minsky-a602b9.netlify.app/index.html" width="444" height="250" 
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                    <div class="desc">
+                        <p class="title">Jane Austen page</p>
+                        <p>Página con contenido sobre la escritora Jane Austen como trabajo integrador 
+                            del curso de desarrollo dictado por Codo a Codo. Agregué la parte de Boostrap 
+                            por mi cuenta ya que no entraba en los contenidos del curso. 
+                            El código de la misma se encuentra subido a <a href="https://github.com/gabrielagcantero/Page1">GitHub</a>
+                        </p>
+                    </div>
+                </article>
 
-        <section>
-            <h3>Educacion Formal</h3>
-            <article class="art">
-                <img src="img/unlp.png" class="logo">
-                <div class="info">
-                    <p class="title">Universidad Nacional de La Plata</p>
-                    <p>Enero 2021 - En curso</p>
-                    <p>Analista Programador Universitario</p>
-                    <p>8.75</p>
-                </div>
-            </article>
-        </section>
-
-        <section>
-            <h3>Cursos</h3>
-            <article class="art">
-                <img src="img/ibmSB.png" class="logo">
-                <div class="info">
-                    <p class="title">IBM Skills Build - Codo a Codo</p>
-                    <p>Sptiembre 2021 - En curso</p>
-                    <p>Especialización en Desarrollo Mobile</p>
-                </div>
-            </article>
-
-            <article class="art">
-                <img src="img/APLogo.png" class="logo">
-                <div class="info">
-                    <p class="title">Argentina Programa</p>
-                    <p>Noviembre 2021 - Mayo 2022</p>
-                    <p>Tramo 2 - #YoProgramo</p>
-                </div>
-            </article>            
-
-            <article class="art">
-                <img src="img/APLogo.png" class="logo">
-                <div class="info">
-                    <p class="title">Argentina Programa</p>
-                    <p>Noviembre 2020 - Diciembre 2020</p>
-                    <p>Tramo 1 - #SeProgramar</p>
-                </div>
-            </article>
-
-            <article class="art">
-                <img src="img/cac.png" class="logo">
-                <div class="info">
-                    <p class="title">Codo a Codo</p>
-                    <p>Agosto 2020 - Diciembre 2020</p>
-                    <p>Python Full Stack</p>
-                </div>
-            </article>
-
-            <article class="art">
-                <img src="img/cac.png" class="logo">
-                <div class="info">
-                    <p class="title">Codo a Codo</p>
-                    <p>Marzo 2019 - Diciembre 2019</p>
-                    <p>Testing Manual y Automatizado</p>
-                </div>
-            </article>
-
-            <article class="art">
-                <img src="img/cac.png" class="logo">
-                <div class="info">
-                    <p class="title">Codo a Codo</p>
-                    <p>Marzo 2018 - Diciembre 2018</p>
-                    <p>Programación en JAVA</p>
-                </div>
-            </article>
-        </section>
-
-        <section class="skills">
-            <h3>Hard & Soft Skills</h3>
-            <div class="gifContainer">
-                <img src="img/Habilidades.gif" alt="" class="gif">
-            </div>
-        </section>
-
-        <section class="proyectos">
-            <h3>Proyectos</h3>
-            <article class="art">
-                <iframe 
-                    src="https://happy-minsky-a602b9.netlify.app/index.html" width="444" height="250" 
-                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
-                <div class="desc">
-                    <p class="title">Jane Austen page</p>
-                    <p>Página con contenido sobre la escritora Jane Austen como trabajo integrador 
-                        del curso de desarrollo dictado por Codo a Codo. Agregué la parte de Boostrap 
-                        por mi cuenta ya que no entraba en los contenidos del curso. 
-                        El código de la misma se encuentra subido a <a href="https://github.com/gabrielagcantero/Page1">GitHub</a>
-                    </p>
-                </div>
-            </article>
-
-            <article class="art">
-                <div class="desc">
-                    <p class="title">Wheather App</p>
-                    <p>Aplicación para consultar el clima de diferentes ciudades. Fue hecha para el curso de desarrollo 
-                        dictado por Codo a Codo junto a IBM Skill Builds en colaboración con fsiqueirag y teotronic5438. 
-                        Puede verse <a href="//github.com/fsiqueirag/weather-app-ibm-cac">aquí</a></p>
-                </div>
-                <iframe 
-                src="https://prezi.com/v/embed/ulze_1oqqqhs/" frameborder="0" 
-                webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" 
-                height="250" width="444">
-                </iframe>
-            </article>
-        </section>
+                <article class="art">
+                    <div class="desc">
+                        <p class="title">Wheather App</p>
+                        <p>Aplicación para consultar el clima de diferentes ciudades. Fue hecha para el curso de desarrollo 
+                            dictado por Codo a Codo junto a IBM Skill Builds en colaboración con fsiqueirag y teotronic5438. 
+                            Puede verse <a href="//github.com/fsiqueirag/weather-app-ibm-cac">aquí</a></p>
+                    </div>
+                    <iframe 
+                    src="https://prezi.com/v/embed/ulze_1oqqqhs/" frameborder="0" 
+                    webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" 
+                    height="250" width="444">
+                    </iframe>
+                </article>
+            </section>
+        </div>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
 
 </html>

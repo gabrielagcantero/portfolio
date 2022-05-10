@@ -1,5 +1,4 @@
 *{
-    margin: 0;
     padding: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -20,18 +19,17 @@ h3, h4{
     color:darkslateblue;
 }
 
-header{
-    margin-left: 15px;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .header{
     display: flex;
-    align-items: center;
+    align-items: center; 
     padding: 10px;
+    margin-left: 10px;
+}
+
+.redes{
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
 }
 
 div{
@@ -39,12 +37,13 @@ div{
 }
 
 .logoAP{
-    height: 100px;
+    height: 120px;
 }
 
 .icon{
-    height: 50px;
+    height: 60px;
     border-radius: 15px;
+    margin: 5px;
 }
 
 .icon2{
@@ -80,8 +79,8 @@ aside{
 
 section{
     width: 95%;
+    margin: 10px;
     padding: 20px;
-    margin: 0px auto 20px;
     border-radius: 10px;
     background-color: rgba(133, 132, 138, .5);
 }
@@ -92,8 +91,7 @@ article{
 }
 
 .sobreMi{
-    margin: -350px 10px 10px 250px;
-    padding: 10px 10px 50px 10px;
+    margin: -300px 10px 10px 10px;
 }
 
 .bio{
@@ -150,21 +148,6 @@ iframe, .gif{
 @media (max-width: 980px) {
     aside{
         top: -300px;
+        left: 10px;
     } 
-
-    .sobreMi{
-        margin: -280px 10px 10px 10px;
-        width: 95%;
-        text-align: justify;
-    }
-
-    .bio p{
-        font-size: 0.8em;
-    }
-
-    .data{
-        width: 100%;
-        font-size: 1.3em;
-    }
-
 }
