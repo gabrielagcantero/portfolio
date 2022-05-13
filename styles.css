@@ -63,6 +63,8 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 5px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -79,7 +81,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: rgba(177, 75, 250, .6);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -105,6 +107,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
+  color:midnightblue;
 }
 
 @media (min-width: 1200px) {
@@ -125,6 +128,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
+  color:darkslateblue;
 }
 
 @media (min-width: 1200px) {
@@ -135,6 +139,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
+  color:darkslateblue;
 }
 
 @media (min-width: 1200px) {
@@ -154,6 +159,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  color:aliceblue;
 }
 
 abbr[title],
@@ -472,8 +478,9 @@ output {
   display: inline-block;
 }
 
-iframe {
+iframe, .gif {
   border: 0;
+  border-radius: 20px;
 }
 
 summary {
@@ -952,6 +959,130 @@ progress {
 .g-5,
 .gy-5 {
   --bs-gutter-y: 3rem;
+}
+
+.header{
+  display: flex;
+  align-items: center; 
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.redes{
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
+}
+
+div{
+  padding: 10px;
+}
+
+.logoAP{
+  height: 120px;
+}
+
+.icon{
+  height: 60px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.icon2{
+  height: 25px;
+  border-radius: 10px;
+}
+
+#banner{
+  width: 100%;
+  opacity: .8;
+  border: solid 1px aliceblue;
+  border-radius: 20px;
+  
+}
+
+aside{
+  position: relative;
+  top: -150px;
+  left: 40px;
+}
+
+#miFoto{
+  width: 200px;
+  border-radius: 50%;
+  border: solid 2px midnightblue;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.logo{
+  height: 100px;
+  border-radius: 50%;
+}
+
+section{
+  width: 95%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(133, 132, 138, .5);
+}
+
+article{
+  padding: 10px;
+  margin: 10px;
+}
+
+.sobreMi{
+  margin: -300px 10px 10px 10px;
+}
+
+.bio{
+  background-color: rgba(133, 132, 138, .5); 
+  border-radius: 20px;
+  border: solid 1px aliceblue;
+}
+
+.contact{
+  display: block;
+}
+
+.data{
+  display: flex;
+}
+
+#mail, #tel, #dir{
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.art{
+  display: flex;
+  border: solid 1px aliceblue;
+  border-radius: 20px;
+  align-items: center;
+  margin: 10px;
+}
+
+.desc{
+  width: 60%;
+  padding: 20px;
+}
+
+.info{
+  padding: 20px;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.gifContainer{
+  display: flex;
+  justify-content: center;
+  border: solid 1px aliceblue;
+  border-radius: 20px;
 }
 
 @media (min-width: 576px) {
@@ -2014,6 +2145,13 @@ progress {
   }
 }
 
+@media (max-width: 980px) {
+  aside{
+      top: -300px;
+      left: 10px;
+  } 
+}
+
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
@@ -2574,7 +2712,6 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  color-adjust: exact;
 }
 
 .form-check-input[type="checkbox"] {
