@@ -343,6 +343,8 @@ label {
 
 button {
   border-radius: 0;
+  background-color: transparent;
+  border: 0px;
 }
 
 button:focus:not(:focus-visible) {
@@ -985,12 +987,23 @@ div{
 .icon{
   height: 60px;
   border-radius: 15px;
-  margin: 5px;
+}
+
+#login{
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .icon2{
-  height: 25px;
+  height: 30px;
   border-radius: 10px;
+}
+
+.icon-edit{
+  margin: 0px;
+  padding: 0px;
+  height: 45px;
 }
 
 #banner{
@@ -1083,6 +1096,25 @@ article{
   justify-content: center;
   border: solid 1px aliceblue;
   border-radius: 20px;
+}
+
+.edit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px
+}
+
+.btn-edit{
+  margin: 0px;
+  padding: 0px;
+}
+
+.buttons{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  justify-content: right;
 }
 
 @media (min-width: 576px) {
