@@ -38,15 +38,18 @@
                         <div class="bio">
                             <div class="edit">
                                 <h4>Sobre mi</h4>
-                                <button class="btn-edit">
+                                <button class="btn-edit" onclick='editAbout()'>
                                     <img src="img/edit.png" alt="edit" class="icon">
                                 </button>
                             </div>
-                            <p>
+                            <p id="aboutText">
                                 Soy una desarrolladora jr. en busca de mi primer empleo en este área. 
                                 He tomado algunos cursos de desarrollo y actualmente estoy cursando la carrera de Analista
                                 Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.
                             </p>
+                            <div>
+                                <input type="text" id="aboutCamp" oninput="editAbout2(this.value)" style="display: none">
+                            </div>
                         </div>
                         <div class="contact">
                             <h4> Información de contacto </h4>
@@ -347,6 +350,33 @@
             </section>
         </div>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script>
+            //funcion que cambia el valor del input a visible
+            function editAbout(){
+                document.getElementById("aboutCamp").style.display="block";
+                let editMyAbout = document.getElementById("aboutText");
+            };
+
+            //cambia el valor de mi texto por el input
+            function editAbout2(valor){
+                document.getElementById("aboutText").innerText=valor;
+            };
+
+            function logMessage(message){
+                console.log(message + "<br>");
+            }
+
+            //controla si se presionó enter
+            let textarea = document.getElementById("aboutCamp")
+            textarea.addEventListener('keyup', (e) => {
+                logMessage('key "${e.key}" released [event: keyup]');
+                if (e.key=="Enter") {
+                    document.getElementById("aboutCamp").style.display="none"
+                }
+            });
+            
+        </script>
     </body>
 
 </html>
