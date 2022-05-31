@@ -362,6 +362,12 @@ textarea {
   line-height: inherit;
 }
 
+input{
+  border-radius: 10px;
+  border: 0px;
+  margin: 2px;
+}
+
 button,
 select {
   text-transform: none;

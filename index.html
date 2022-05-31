@@ -32,13 +32,14 @@
                     <aside class="col-4">
                         <img src="img/foto.jpg" alt="Mi foto" id="miFoto">
                         <h1> Gabriela Cantero </h1>
-                        <h3> Desarrolladora Web <br> Full Stack Jr. </h3>
+                        <h3 id="titleText"> Desarrolladora Web <br> Full Stack Jr. </h3>
+                        <input type="text" placeholder="Título" id="titleCamp" oninput="editTitle2(this.value)" style="display: none">
                     </aside>
                     <article class="col-lg-8 ms-auto sobreMi title">
                         <div class="bio">
                             <div class="edit">
                                 <h4>Sobre mi</h4>
-                                <button class="btn-edit" onclick='editAbout()'>
+                                <button id="btnEditAbout" class="btn-edit" onclick='editAbout()'>
                                     <img src="img/edit.png" alt="edit" class="icon">
                                 </button>
                             </div>
@@ -48,15 +49,20 @@
                                 Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.
                             </p>
                             <div>
-                                <input type="text" id="aboutCamp" oninput="editAbout2(this.value)" style="display: none">
+                                <input type="text" placeholder="Sobre mí" id="aboutCamp" oninput="editAbout2(this.value)" style="display: none">
                             </div>
                         </div>
                         <div class="contact">
                             <h4> Información de contacto </h4>
                             <div class="data">
-                                <p id="mail"><img src="img/mail.png" class="icon2">gabrielagcantero@gmail.com</p>
-                                <P id="tel"><img src="img/tel.png" class="icon2"> +54 9 11 39475470</P>
-                                <p id="dir"><img src="img/lugar.png" class="icon2">Gonnet, Bs. As.</p>
+                                <p id="mail"><img src="img/mail.png" class="icon2"><span id="mailText">gabrielagcantero@gmail.com</span></p> 
+                                <P id="tel"><img src="img/tel.png" class="icon2"><span id="telText"> +54 9 11 39475470</span></P> 
+                                <p id="dir"><img src="img/lugar.png" class="icon2"><span id="dirText">Gonnet, Bs. As.</span></p>    
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Mail" id="mailCamp" oninput="editMail2(this.value)" style="display: none">
+                                <input type="text" placeholder="Tel" id="telCamp" oninput="editTel2(this.value)" style="display: none">
+                                <input type="text" placeholder="Dir" id="dirCamp" oninput="editDir2(this.value)" style="display: none">
                             </div>
                         </div>
                     </article>
@@ -350,33 +356,7 @@
             </section>
         </div>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script>
-            //funcion que cambia el valor del input a visible
-            function editAbout(){
-                document.getElementById("aboutCamp").style.display="block";
-                let editMyAbout = document.getElementById("aboutText");
-            };
-
-            //cambia el valor de mi texto por el input
-            function editAbout2(valor){
-                document.getElementById("aboutText").innerText=valor;
-            };
-
-            function logMessage(message){
-                console.log(message + "<br>");
-            }
-
-            //controla si se presionó enter
-            let textarea = document.getElementById("aboutCamp")
-            textarea.addEventListener('keyup', (e) => {
-                logMessage('key "${e.key}" released [event: keyup]');
-                if (e.key=="Enter") {
-                    document.getElementById("aboutCamp").style.display="none"
-                }
-            });
-            
-        </script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 
 </html>
