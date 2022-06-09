@@ -1123,6 +1123,24 @@ article{
   justify-content: right;
 }
 
+form{
+  align-items: center;
+}
+
+form input{
+  width: 70%;
+  margin-left: 20px;
+}
+
+form button{
+  width: 30%;
+  background-color: #6f42c1;
+  color: aliceblue;
+  margin: 10px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
 @media (min-width: 576px) {
   .col-sm {
     -webkit-box-flex: 1;
