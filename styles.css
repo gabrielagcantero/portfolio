@@ -362,10 +362,16 @@ textarea {
   line-height: inherit;
 }
 
-input{
+input, textarea{
   border-radius: 10px;
   border: 0px;
   margin: 2px;
+}
+
+textarea{
+  margin-left: 20px;
+  width: 70%;
+  margin-bottom: 0px;
 }
 
 button,
@@ -1100,8 +1106,6 @@ article{
 .gifContainer{
   display: flex;
   justify-content: center;
-  border: solid 1px aliceblue;
-  border-radius: 20px;
 }
 
 .edit{
