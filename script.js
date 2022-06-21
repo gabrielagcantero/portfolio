@@ -63,7 +63,7 @@ function addExp2(){
     let art = document.createElement("article"); //crea el elemento a agregr
     art.className="row art artExp"; //asigna clase al elemento creado
     //html del elemento creado
-    art.innerHTML='<div class="col-2"><img class="logo logoExp2"></div><div class="col info"><div class="edit"><p class="title nombreExp2"></p><div class="buttons"><button class="btn-edit"><img src="img/del.png" alt="edit" class="icon-edit"></button><button class="btn-edit"><img src="img/edit.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaExp2"></p><p class="puestoExp2"></p><p class="tareasExp2"></p></div>';
+    art.innerHTML='<div class="col-2"><img class="logo logoExp2"></div><div class="col info"><div class="edit"><p class="title nombreExp2"></p><div class="buttons"><button class="btn-edit" onclick="deletes(this)"><img src="img/del.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaExp2"></p><p class="puestoExp2"></p><p class="tareasExp2"></p></div>';
     exp.appendChild(art); //agrega el elemento creado
 
     //pone valores en el elemento creado
@@ -103,7 +103,7 @@ function addEdu2(){
     let art = document.createElement("article"); //crea el elemento a agregr
     art.className="row art artEdu"; //asigna clase al elemento creado
     //html del elemento creado
-    art.innerHTML='<div class="col-2"><img class="logo logoEdu2"></div><div class="col info"><div class="edit"><p class="title nombreEdu2"></p><div class="buttons"><button class="btn-edit"><img src="img/del.png" alt="edit" class="icon-edit"></button><button class="btn-edit"><img src="img/edit.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaEdu2"></p><p class="tituloEdu2"></p><p class="promedioEdu2"></p></div>';
+    art.innerHTML='<div class="col-2"><img class="logo logoEdu2"></div><div class="col info"><div class="edit"><p class="title nombreEdu2"></p><div class="buttons"><button class="btn-edit" onclick="deletes(this)"><img src="img/del.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaEdu2"></p><p class="tituloEdu2"></p><p class="promedioEdu2"></p></div>';
     edu.appendChild(art); //agrega el elemento creado
 
     //pone valores en el elemento creado
@@ -143,7 +143,7 @@ function addCurso2(){
     let art = document.createElement("article"); //crea el elemento a agregr
     art.className="row art artCurso"; //asigna clase al elemento creado
     //html del elemento creado
-    art.innerHTML='<div class="col-3"><img class="logo logoCurso2"></div><div class="col info"><div class="edit"><p class="title nombreCurso2"></p><div class="buttons"><button class="btn-edit"><img src="img/del.png" alt="edit" class="icon-edit"></button><button class="btn-edit"><img src="img/edit.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaCurso2"></p><p class="tituloCurso2"></p></div>';
+    art.innerHTML='<div class="col-3"><img class="logo logoCurso2"></div><div class="col info"><div class="edit"><p class="title nombreCurso2"></p><div class="buttons"><button class="btn-edit"  onclick="deletes(this)"><img src="img/del.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaCurso2"></p><p class="tituloCurso2"></p></div>';
     curso.appendChild(art); //agrega el elemento creado
 
     //pone valores en el elemento creado
@@ -200,7 +200,7 @@ function addProyect2(){
     let art = document.createElement("article"); //crea el elemento a agregr
     art.className="row art artProyect"; //asigna clase al elemento creado
     //html del elemento creado
-    art.innerHTML='<iframe class="col-5 imgProyect2" src="" width="444" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><div class="col desc"><div class="edit"><p class="title nombreProyect2"></p><div class="buttons"><button class="btn-edit"><img src="img/del.png" alt="edit" class="icon-edit"></button><button class="btn-edit"><img src="img/edit.png" alt="edit" class="icon-edit"></button></div></div><p class="descProyect2"></p><p>Puede verse el código <a class="linkProyect2" href="" >aquí</a></p></div>';
+    art.innerHTML='<iframe class="col-5 imgProyect2" src="" width="444" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><div class="col desc"><div class="edit"><p class="title nombreProyect2"></p><div class="buttons"><button class="btn-edit"  onclick="deletes(this)"><img src="img/del.png" alt="edit" class="icon-edit"></button></div></div><p class="descProyect2"></p><p>Puede verse el código <a class="linkProyect2" href="" >aquí</a></p></div>';
     proyect.appendChild(art); //agrega el elemento creado
 
     //pone valores en el elemento creado
@@ -215,4 +215,9 @@ function addProyect2(){
     document.getElementById("nombreProyect").value="";
     document.getElementById("fechaProyect").value="";
     document.getElementById("tituloProyect").value="";
+}
+
+//elimina el cuadro del boton seleccionado
+function deletes(btn){
+    btn.parentNode.parentNode.parentNode.parentNode.remove();
 }
