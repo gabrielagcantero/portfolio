@@ -221,3 +221,13 @@ function addProyect2(){
 function deletes(btn){
     btn.parentNode.parentNode.parentNode.parentNode.remove();
 }
+
+//hace aparecer el formulario de login
+function login(){
+    document.getElementById("loginDiv").style.display="block";
+}
+
+//
+function login2(){
+    
+}

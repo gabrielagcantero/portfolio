@@ -1118,6 +1118,7 @@ article{
 .btn-edit{
   margin: 0px;
   padding: 0px;
+  display: none;
 }
 
 .buttons{
@@ -1143,6 +1144,25 @@ form button{
   margin: 10px;
   margin-left: 20px;
   border-radius: 10px;
+}
+
+#loginDiv{
+  position: absolute;
+  margin-left: 350px;
+  margin-top: 200px;
+  z-index: 1;
+  background-color: rgb(177, 75, 250);
+  border-radius: 10px;
+  border: 2px solid #6f42c1;
+  display: none;
+}
+
+#logForm{
+  text-align: center;
+}
+
+#user, #pass{
+  margin: 10px;
 }
 
 #logout{
