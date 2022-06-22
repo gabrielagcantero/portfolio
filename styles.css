@@ -1001,7 +1001,7 @@ div{
   border-radius: 15px;
 }
 
-#login{
+#login, #logout{
   height: 50px;
   margin: 10px;
   border-radius: 5px;

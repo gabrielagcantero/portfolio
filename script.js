@@ -219,7 +219,7 @@ function addProyect2(){
 
 //elimina el cuadro del boton seleccionado
 function deletes(btn){
-    btn.parentNode.parentNode.parentNode.parentNode.remove();
+    btn.closest("article").remove();
 }
 
 //hace aparecer el formulario de login
@@ -229,5 +229,38 @@ function login(){
 
 //
 function login2(){
-    
+    event.preventDefault();
+
+    //guarda los valores del formulario
+    let user = document.getElementById("user");
+    let pass = document.getElementById("pass");
+
+    if ((user.value == "Gabriela") && (pass.value == "123456")){
+        //hace aparecer todos los botones de edit
+        let buttons = Array.from(document.getElementsByClassName("btn-edit"));
+        buttons.forEach(element => element.style.display="block");
+
+        //cambia el boton de login por el de logout
+        document.getElementById("login").style.display="none";
+        document.getElementById("logout").style.display="block";
+    } else {
+        alert("Usuario o contraseña incorrectos. Intente de nuevo.");
+    }
+
+    //oculta el formulario de login
+    document.getElementById("loginDiv").style.display="none";
+    user.value="";
+    pass.value="";
+}
+
+function logout(){
+    event.preventDefault();
+
+    //hace desaparecer todos los botones de edit
+    let buttons = Array.from(document.getElementsByClassName("btn-edit"));
+    buttons.forEach(element => element.style.display="none");
+
+    //cambia el boton de logout por el de login
+    document.getElementById("login").style.display="block";
+    document.getElementById("logout").style.display="none";
 }
