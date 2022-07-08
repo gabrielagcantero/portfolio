@@ -1,0 +1,55 @@
+<section class="container-fluid">
+    <div class="edit">
+        <h3>Últimas Experiencias Laborales</h3>
+        <button class="btn-edit" onclick='addExp()' >
+            <img src="https://i.ibb.co/sQYnq8j/add.png" alt="edit" class="icon">
+        </button>
+    </div>
+    <form id="addExpForm" style="display: none">
+        <input id="logoExp" type="text" placeholder="Url del logo de la empresa"><br>
+        <input id="nombreExp" type="text" placeholder="Nombre de la empresa"><br>
+        <input id="fechaExp" type="text" placeholder="mes/año de inicio - mes/año de finalización"><br>
+        <input id="puestoExp" type="text" placeholder="Nombre del puesto"><br>
+        <input id="tareasExp" type="text" placeholder="Tareas desarrolladas"><br>
+        <button onclick='addExp2()'>Guardar</button>
+    </form>
+    <div id="exps">
+        <article class="row art artExp">
+            <div class="col-2">
+                <img src="https://i.ibb.co/CW2hrV2/violetta.jpg" class="logo">
+            </div>
+            <div class="col info">
+                <div class="edit">
+                    <p class="title">Violetta Cosméticos</p>
+                    <div class="buttons">
+                        <button class="btn-edit" onclick="deletes(this)">
+                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
+                        </button>
+                    </div>
+                </div>
+                <p>Julio 2017 - Marzo 2018</p>
+                <p>Secretaria de Gerencia</p>
+                <p>Tareas administrativas, asistencia a gerentes, atención telefónica, presentaciones.</p>
+            </div>
+        </article>
+
+        <article class="row art artExp">
+            <div class="col-2">
+                <img src="https://i.ibb.co/1bJ5DxF/europ.png" class="logo">
+            </div>
+            <div class="col info">
+                <div class="edit">
+                    <p class="title">Europ Assistance</p>
+                    <div class="buttons">
+                        <button class="btn-edit" onclick="deletes(this)">
+                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
+                        </button>
+                    </div>
+                </div>
+                <p>Noviembre 2016 - Febero 2017</p>
+                <p>Operador técnico telefónico</p>
+                <p>Atención telefónica de emergencias automotrices, contención de socios, control de demora.</p>
+            </div>
+        </article>
+    </div>
+</section>

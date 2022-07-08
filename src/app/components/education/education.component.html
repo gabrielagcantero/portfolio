@@ -1,0 +1,36 @@
+<section class="container-fluid">
+    <div class="edit">
+        <h3>Educacion Formal</h3>
+        <button class="btn-edit" onclick='addEdu()'>
+            <img src="https://i.ibb.co/sQYnq8j/add.png" alt="edit" class="icon">
+        </button>
+    </div>
+    <form id="addEduForm" style="display: none">
+        <input id="logoEdu" type="text" placeholder="Url del logo de la institución"><br>
+        <input id="nombreEdu" type="text" placeholder="Nombre de la institución"><br>
+        <input id="fechaEdu" type="text" placeholder="mes/año de inicio - mes/año de finalización"><br>
+        <input id="tituloEdu" type="text" placeholder="Título obtenido"><br>
+        <input id="promedioEdu" type="number" placeholder="Promedio"><br>
+        <button onclick='addEdu2()'>Guardar</button>
+    </form>
+    <div id="edus">
+        <article class="row art artEdu">
+            <div class="col-2">
+                <img src="https://i.ibb.co/GVP9hWs/unlp.png" class="logo">
+            </div>
+            <div class="col info">
+                <div class="edit">
+                    <p class="title">Universidad Nacional de La Plata</p>
+                    <div class="buttons">
+                        <button class="btn-edit" onclick="deletes(this)">
+                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
+                        </button>
+                    </div>
+                </div>
+                <p>Enero 2021 - En curso</p>
+                <p>Analista Programador Universitario</p>
+                <p>Promedio: 8.75</p>
+            </div>
+        </article>
+    </div>
+</section>
