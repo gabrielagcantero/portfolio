@@ -16,39 +16,39 @@
     <div id="exps">
         <article class="row art artExp">
             <div class="col-2">
-                <img src="https://i.ibb.co/CW2hrV2/violetta.jpg" class="logo">
+                <img [src]="myProfile.jobs[0].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Violetta Cosméticos</p>
+                    <p class="title">{{myProfile.jobs[0].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Julio 2017 - Marzo 2018</p>
-                <p>Secretaria de Gerencia</p>
-                <p>Tareas administrativas, asistencia a gerentes, atención telefónica, presentaciones.</p>
+                <p>{{myProfile.jobs[0].date}}</p>
+                <p>{{myProfile.jobs[0].job}}</p>
+                <p>{{myProfile.jobs[0].tasks}}</p>
             </div>
         </article>
 
         <article class="row art artExp">
             <div class="col-2">
-                <img src="https://i.ibb.co/1bJ5DxF/europ.png" class="logo">
+                <img [src]="myProfile.jobs[1].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Europ Assistance</p>
+                    <p class="title">{{myProfile.jobs[1].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Noviembre 2016 - Febero 2017</p>
-                <p>Operador técnico telefónico</p>
-                <p>Atención telefónica de emergencias automotrices, contención de socios, control de demora.</p>
+                <p>{{myProfile.jobs[1].date}}</p>
+                <p>{{myProfile.jobs[1].job}}</p>
+                <p>{{myProfile.jobs[1].tasks}}</p>
             </div>
         </article>
     </div>

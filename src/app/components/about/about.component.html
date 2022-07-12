@@ -8,7 +8,7 @@
         <aside class="col-4">
             <img src="https://i.ibb.co/x39MXG7/foto.jpg" alt="Mi foto" id="miFoto">
             <h1> Gabriela Cantero </h1>
-            <h3 id="titleText"> Desarrolladora Web <br> Full Stack Jr. </h3>
+            <h3 id="titleText"> {{myProfile.about.title}} </h3>
             <input type="text" placeholder="Título" id="titleCamp" oninput="editTitle2(this.value)" style="display: none">
         </aside>
         <article class="col-lg-8 ms-auto sobreMi title">
@@ -20,9 +20,7 @@
                     </button>
                 </div>
                 <p id="aboutText">
-                    Soy una desarrolladora jr. en busca de mi primer empleo en este área. 
-                    He tomado algunos cursos de desarrollo y actualmente estoy cursando la carrera de Analista
-                    Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.
+                    {{myProfile.about.biography}}
                 </p>
                 <div>
                     <input type="text" placeholder="Sobre mí" id="aboutCamp" oninput="editAbout2(this.value)" style="display: none">
@@ -31,9 +29,9 @@
             <div class="contact">
                 <h4> Información de contacto </h4>
                 <div class="data">
-                    <p id="mail"><img src="https://i.ibb.co/gMxHZDP/mail.png" class="icon2"><span id="mailText">gabrielagcantero@gmail.com</span></p> 
-                    <P id="tel"><img src="https://i.ibb.co/86NLBPz/tel.png" class="icon2"><span id="telText"> +54 9 11 39475470</span></P> 
-                    <p id="dir"><img src="https://i.ibb.co/qLSDjJm/lugar.png" class="icon2"><span id="dirText">Gonnet, Bs. As.</span></p>    
+                    <p id="mail"><img src="https://i.ibb.co/gMxHZDP/mail.png" class="icon2"><span id="mailText">{{myProfile.about.mail}}</span></p> 
+                    <P id="tel"><img src="https://i.ibb.co/86NLBPz/tel.png" class="icon2"><span id="telText">{{myProfile.about.tel}}</span></P> 
+                    <p id="dir"><img src="https://i.ibb.co/qLSDjJm/lugar.png" class="icon2"><span id="dirText">{{myProfile.about.address}}</span></p>    
                 </div>
                 <div>
                     <input type="text" placeholder="Mail" id="mailCamp" oninput="editMail2(this.value)" style="display: none">

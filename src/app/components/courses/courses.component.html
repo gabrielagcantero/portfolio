@@ -15,110 +15,110 @@
     <div id="cursos">
         <article class="row art">
             <div class="col-3">
-                <img src="https://i.ibb.co/qrj95Tv/ibmSB.png" class="logo">
+                <img [src]="myProfile.courses[0].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">IBM Skills Build - Codo a Codo</p>
+                    <p class="title">{{myProfile.courses[0].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Sptiembre 2021 - En curso</p>
-                <p>Especialización en Desarrollo Mobile</p>
+                <p>{{myProfile.courses[0].date}}</p>
+                <p>{{myProfile.courses[0].title}}</p>
             </div>
         </article>
 
         <article class="row art">
             <div class="col-3">
-                <img src="https://i.ibb.co/R33Gsnn/APLogo.png" class="logo">
+                <img [src]="myProfile.courses[1].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Argentina Programa</p>
+                    <p class="title">{{myProfile.courses[1].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Noviembre 2021 - Mayo 2022</p>
-                <p>Tramo 2 - #YoProgramo</p>
+                <p>{{myProfile.courses[1].date}}</p>
+                <p>{{myProfile.courses[1].title}}</p>
             </div>
-        </article>            
-
-        <article class="row art">
-                <div class="col-3">
-                    <img src="https://i.ibb.co/R33Gsnn/APLogo.png" class="logo">
-                </div>
-                <div class="col info">
-                    <div class="edit">
-                        <p class="title">Argentina Programa</p>
-                        <div class="buttons">
-                            <button class="btn-edit" onclick="deletes(this)">
-                                <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
-                            </button>
-                        </div>
-                    </div>
-                    <p>Noviembre 2020 - Diciembre 2020</p>
-                    <p>Tramo 1 - #SeProgramar</p>
-                </div>
-        </article>
+        </article>      
 
         <article class="row art">
             <div class="col-3">
-                <img src="https://i.ibb.co/7z8gjGC/cac.png" class="logo">
+                <img [src]="myProfile.courses[2].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Codo a Codo</p>
+                    <p class="title">{{myProfile.courses[2].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Agosto 2020 - Diciembre 2020</p>
-                <p>Python Full Stack</p>
+                <p>{{myProfile.courses[2].date}}</p>
+                <p>{{myProfile.courses[2].title}}</p>
             </div>
-        </article>
+        </article>    
 
         <article class="row art">
             <div class="col-3">
-                <img src="https://i.ibb.co/7z8gjGC/cac.png" class="logo">
+                <img [src]="myProfile.courses[3].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Codo a Codo</p>
+                    <p class="title">{{myProfile.courses[3].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Marzo 2019 - Diciembre 2019</p>
-                <p>Testing Manual y Automatizado</p>
+                <p>{{myProfile.courses[3].date}}</p>
+                <p>{{myProfile.courses[3].title}}</p>
             </div>
-        </article>
+        </article>    
 
         <article class="row art">
             <div class="col-3">
-                <img src="https://i.ibb.co/7z8gjGC/cac.png" class="logo">
+                <img [src]="myProfile.courses[4].logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Codo a Codo</p>
+                    <p class="title">{{myProfile.courses[4].name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Marzo 2018 - Diciembre 2018</p>
-                <p>Programación en JAVA</p>
+                <p>{{myProfile.courses[4].date}}</p>
+                <p>{{myProfile.courses[4].title}}</p>
             </div>
-        </article>
+        </article>    
+
+        <article class="row art">
+            <div class="col-3">
+                <img [src]="myProfile.courses[5].logo" class="logo">
+            </div>
+            <div class="col info">
+                <div class="edit">
+                    <p class="title">{{myProfile.courses[5].name}}</p>
+                    <div class="buttons">
+                        <button class="btn-edit" onclick="deletes(this)">
+                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
+                        </button>
+                    </div>
+                </div>
+                <p>{{myProfile.courses[5].date}}</p>
+                <p>{{myProfile.courses[5].title}}</p>
+            </div>
+        </article>    
     </div>
 </section>

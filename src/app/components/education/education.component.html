@@ -16,20 +16,20 @@
     <div id="edus">
         <article class="row art artEdu">
             <div class="col-2">
-                <img src="https://i.ibb.co/GVP9hWs/unlp.png" class="logo">
+                <img [src]="myProfile.education.logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">Universidad Nacional de La Plata</p>
+                    <p class="title">{{myProfile.education.name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Enero 2021 - En curso</p>
-                <p>Analista Programador Universitario</p>
-                <p>Promedio: 8.75</p>
+                <p>{{myProfile.education.date}}</p>
+                <p>{{myProfile.education.title}}</p>
+                <p>Promedio: {{myProfile.education.prom}}</p>
             </div>
         </article>
     </div>

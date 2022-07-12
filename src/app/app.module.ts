@@ -10,6 +10,7 @@ import { EducationComponent } from './components/education/education.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProyectsComponent } from './components/proyects/proyects.component';
     ProyectsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

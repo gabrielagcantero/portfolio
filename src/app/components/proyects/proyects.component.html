@@ -14,23 +14,21 @@
     </form>
     <div id="proyects">
         <article class="row art artProyect">
+            <!--ver binding para iframe y links-->
             <iframe class="col-5"
                 src="https://happy-minsky-a602b9.netlify.app/index.html" width="444" height="250" 
                 frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
             </iframe>
             <div class="col desc">
                 <div class="edit">
-                    <p class="title">Jane Austen page</p>
+                    <p class="title">{{myProfile.proyects[0].title}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Página con contenido sobre la escritora Jane Austen como trabajo integrador 
-                    del curso de desarrollo dictado por Codo a Codo. Agregué la parte de Boostrap 
-                    por mi cuenta ya que no entraba en los contenidos del curso.
-                </p> 
+                <p>{{myProfile.proyects[0].desc}}</p> 
                 <p>Puede verse el código <a href="https://github.com/gabrielagcantero/Page1">aquí</a></p>
             </div>
         </article>
@@ -43,16 +41,14 @@
             </iframe>
             <div class="col desc">
                 <div class="edit">
-                    <p class="title">Wheather App</p>
+                    <p class="title">{{myProfile.proyects[1].title}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Aplicación para consultar el clima de diferentes ciudades. Fue hecha para el curso de desarrollo 
-                    dictado por Codo a Codo junto a IBM Skill Builds en colaboración con fsiqueirag y teotronic5438.
-                </p>
+                <p>{{myProfile.proyects[1].desc}}</p>
                 <p>Puede verse el código <a href="https://github.com/fsiqueirag/weather-app-ibm-cac">aquí</a></p>
             </div>
         </article>

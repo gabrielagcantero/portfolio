@@ -169,6 +169,10 @@
     cursor: help;
     text-decoration-skip-ink: none;
   }
+
+  #titleText{
+    padding-right: 50px;
+  }
   
   address {
     margin-bottom: 1rem;
