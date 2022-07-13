@@ -12,45 +12,25 @@
         <input id="linkProyect" type="text" placeholder="link al repositorio del proyecto"><br>
         <button onclick='addProyect2()'>Guardar</button>
     </form>
-    <div id="proyects">
-        <article class="row art artProyect">
+    <ul id="proyects">
+        <li class="row art artProyect" *ngFor="let proyect of myProyects">
             <!--ver binding para iframe y links-->
             <iframe class="col-5"
-                src="https://happy-minsky-a602b9.netlify.app/index.html" width="444" height="250" 
+                [src]="proyect.iframe" width="444" height="250" 
                 frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
             </iframe>
             <div class="col desc">
                 <div class="edit">
-                    <p class="title">{{myProfile.proyects[0].title}}</p>
+                    <p class="title">{{proyect.title}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{myProfile.proyects[0].desc}}</p> 
-                <p>Puede verse el código <a href="https://github.com/gabrielagcantero/Page1">aquí</a></p>
+                <p>{{proyect.desc}}</p> 
+                <p>Puede verse el código <a [href]="proyect.link">aquí</a></p>
             </div>
-        </article>
-
-        <article class="row art artProyect">
-            <iframe class="col-5"
-                src="https://prezi.com/v/embed/ulze_1oqqqhs/" frameborder="0" 
-                webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" 
-                height="250" width="444">
-            </iframe>
-            <div class="col desc">
-                <div class="edit">
-                    <p class="title">{{myProfile.proyects[1].title}}</p>
-                    <div class="buttons">
-                        <button class="btn-edit" onclick="deletes(this)">
-                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
-                        </button>
-                    </div>
-                </div>
-                <p>{{myProfile.proyects[1].desc}}</p>
-                <p>Puede verse el código <a href="https://github.com/fsiqueirag/weather-app-ibm-cac">aquí</a></p>
-            </div>
-        </article>
-    </div>
+        </li>
+    </ul>
 </section>

@@ -22,13 +22,13 @@
         "tasks": "Atención telefónica de emergencias automotrices, contención de socios, control de demora."   
     }],
 
-    "education":{
+    "education":[{
         "logo": "https://i.ibb.co/GVP9hWs/unlp.png",
         "name": "Universidad Nacional de La Plata",
         "date": "Enero 2021 - En curso",
         "title": "Analista Programador Universitario",
         "prom": "8.75"
-    },
+    }],
 
     "courses":[{
         "logo": "https://i.ibb.co/qrj95Tv/ibmSB.png",

@@ -13,24 +13,24 @@
         <input id="promedioEdu" type="number" placeholder="Promedio"><br>
         <button onclick='addEdu2()'>Guardar</button>
     </form>
-    <div id="edus">
-        <article class="row art artEdu">
+    <ul id="edus">
+        <li class="row art artEdu" *ngFor="let education of myEducation">
             <div class="col-2">
-                <img [src]="myProfile.education.logo" class="logo">
+                <img [src]="education.logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">{{myProfile.education.name}}</p>
+                    <p class="title">{{education.name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{myProfile.education.date}}</p>
-                <p>{{myProfile.education.title}}</p>
-                <p>Promedio: {{myProfile.education.prom}}</p>
+                <p>{{education.date}}</p>
+                <p>{{education.title}}</p>
+                <p>Promedio: {{education.prom}}</p>
             </div>
-        </article>
-    </div>
+        </li>
+    </ul>
 </section>

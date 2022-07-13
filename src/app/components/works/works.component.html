@@ -13,43 +13,24 @@
         <input id="tareasExp" type="text" placeholder="Tareas desarrolladas"><br>
         <button onclick='addExp2()'>Guardar</button>
     </form>
-    <div id="exps">
-        <article class="row art artExp">
+    <ul id="exps">
+        <li class="row art artExp" *ngFor="let job of myJobs">
             <div class="col-2">
-                <img [src]="myProfile.jobs[0].logo" class="logo">
+                <img [src]="job.logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">{{myProfile.jobs[0].name}}</p>
+                    <p class="title">{{job.name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{myProfile.jobs[0].date}}</p>
-                <p>{{myProfile.jobs[0].job}}</p>
-                <p>{{myProfile.jobs[0].tasks}}</p>
+                <p>{{job.date}}</p>
+                <p>{{job.job}}</p>
+                <p>{{job.tasks}}</p>
             </div>
-        </article>
-
-        <article class="row art artExp">
-            <div class="col-2">
-                <img [src]="myProfile.jobs[1].logo" class="logo">
-            </div>
-            <div class="col info">
-                <div class="edit">
-                    <p class="title">{{myProfile.jobs[1].name}}</p>
-                    <div class="buttons">
-                        <button class="btn-edit" onclick="deletes(this)">
-                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
-                        </button>
-                    </div>
-                </div>
-                <p>{{myProfile.jobs[1].date}}</p>
-                <p>{{myProfile.jobs[1].job}}</p>
-                <p>{{myProfile.jobs[1].tasks}}</p>
-            </div>
-        </article>
-    </div>
+        </li>
+    </ul>
 </section>
