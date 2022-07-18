@@ -71,12 +71,12 @@
         "iframe": "https://happy-minsky-a602b9.netlify.app/index.html",
         "title": "Jane Austen page",
         "desc": "Página con contenido sobre la escritora Jane Austen como trabajo integrador del curso de desarrollo dictado por Codo a Codo. Agregué la parte de Boostrap por mi cuenta ya que no entraba en los contenidos del curso.",
-        "limk": "https://github.com/gabrielagcantero/Page1"
+        "link": "https://github.com/gabrielagcantero/Page1"
     },
     {
         "iframe": "https://prezi.com/v/embed/ulze_1oqqqhs/",
         "title": "Wheather App",
         "desc": "Aplicación para consultar el clima de diferentes ciudades. Fue hecha para el curso de desarrollo dictado por Codo a Codo junto a IBM Skill Builds en colaboración con fsiqueirag y teotronic5438.",
-        "limk": "https://github.com/fsiqueirag/weather-app-ibm-cac"       
+        "link": "https://github.com/fsiqueirag/weather-app-ibm-cac"       
     }]
 }
