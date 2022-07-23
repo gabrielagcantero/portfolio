@@ -31,7 +31,7 @@
         </form>
         
         <p>Actualizar persona existente</p>
-        <form action="SvEditPerson" method="POST">
+        <form action="SvEdit m45rPerson" method="POST">
             <input type="text" name="name" placeholder="Nombre y apellido"><br>
             <input type="text" name="photo" placeholder="Url de la foto"><br>
             <input type="text" name="title" placeholder="Título"><br>
