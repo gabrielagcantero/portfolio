@@ -1169,7 +1169,7 @@
     margin: 10px;
   }
   
-  #logout{
+  #logout, #aboutForm{
     display: none;
   }
   

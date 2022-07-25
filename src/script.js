@@ -1,23 +1,6 @@
 //funcion que cambia el valor del input a visible
 function editAbout(){
-    if (document.getElementById("aboutCamp").style.display=="none") { 
-        document.getElementById("aboutCamp").style.display="block";
-        let editMyAbout = document.getElementById("aboutText");
-        document.getElementById("titleCamp").style.display="block";
-        let editMyTitle = document.getElementById("titleText");
-        document.getElementById("mailCamp").style.display="block";
-        let editMyMail = document.getElementById("mailText");
-        document.getElementById("telCamp").style.display="block";
-        let editMyTell = document.getElementById("telText");
-        document.getElementById("dirCamp").style.display="block";
-        let editMyDir = document.getElementById("dirText");
-    } else {
-        document.getElementById("aboutCamp").style.display="none";
-        document.getElementById("titleCamp").style.display="none";
-        document.getElementById("mailCamp").style.display="none";
-        document.getElementById("telCamp").style.display="none";
-        document.getElementById("dirCamp").style.display="none";
-    }
+    document.getElementById("aboutForm").style.display="block";
 };
 
 
