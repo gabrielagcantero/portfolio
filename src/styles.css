@@ -1134,6 +1134,7 @@
   
   form{
     align-items: center;
+    padding: 40px;
   }
   
   form input{
@@ -1169,9 +1170,10 @@
     margin: 10px;
   }
   
-  #logout{
+  #logout, #aboutForm{
     display: none;
   }
+
   
   @media (min-width: 576px) {
     .col-sm {

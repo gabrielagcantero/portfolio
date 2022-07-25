@@ -1,30 +1,28 @@
 <section class="container-fluid">
     <div class="row">
         <div class="col">
-            <img src="https://i.ibb.co/Kr2HHJQ/banner.jpg " alt="Banner con libro" id="banner" class="img-fluid">
+            <img [src]="myAbout.banner" alt="Banner con libro" id="banner" class="img-fluid">
         </div>
     </div>
     <div class="row">
         <aside class="col-4">
-            <img src="https://i.ibb.co/x39MXG7/foto.jpg" alt="Mi foto" id="miFoto">
-            <h1> Gabriela Cantero </h1>
+            <img [src]="myAbout.photo" alt="Mi foto" id="miFoto">
+            <h1> 
+                <button id="btnEditAbout" class="btn-edit" onclick='editAbout()'>
+                    <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
+                </button>
+                {{myAbout.name}}
+            </h1>
             <h3 id="titleText"> {{myAbout.title}} </h3>
-            <input type="text" placeholder="Título" id="titleCamp" oninput="editTitle2(this.value)" style="display: none">
         </aside>
         <article class="col-lg-8 ms-auto sobreMi title">
             <div class="bio">
                 <div class="edit">
-                    <h4>Sobre mi</h4>
-                    <button id="btnEditAbout" class="btn-edit" onclick='editAbout()'>
-                        <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
-                    </button>
+                    <h4>Sobre mi</h4>    
                 </div>
                 <p id="aboutText">
                     {{myAbout.biography}}
                 </p>
-                <div>
-                    <input type="text" placeholder="Sobre mí" id="aboutCamp" oninput="editAbout2(this.value)" style="display: none">
-                </div>
             </div>
             <div class="contact">
                 <h4> Información de contacto </h4>
@@ -33,12 +31,10 @@
                     <P id="tel"><img src="https://i.ibb.co/86NLBPz/tel.png" class="icon2"><span id="telText">{{myAbout.tel}}</span></P> 
                     <p id="dir"><img src="https://i.ibb.co/qLSDjJm/lugar.png" class="icon2"><span id="dirText">{{myAbout.address}}</span></p>    
                 </div>
-                <div>
-                    <input type="text" placeholder="Mail" id="mailCamp" oninput="editMail2(this.value)" style="display: none">
-                    <input type="text" placeholder="Tel" id="telCamp" oninput="editTel2(this.value)" style="display: none">
-                    <input type="text" placeholder="Dir" id="dirCamp" oninput="editDir2(this.value)" style="display: none">
-                </div>
             </div>
         </article>
     </div>
+</section>
+<section class="container-fluid" id="aboutForm">
+    <app-edit-about></app-edit-about>
 </section>

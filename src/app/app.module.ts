@@ -11,6 +11,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditAboutComponent } from './components/forms/edit-about/edit-about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     CoursesComponent,
     SkillsComponent,
     ProyectsComponent,
+    EditAboutComponent,
   ],
   imports: [
     BrowserModule,
