@@ -7,18 +7,29 @@
     <div class="row">
         <aside class="col-4">
             <img [src]="myAbout.photo" alt="Mi foto" id="miFoto">
+<<<<<<< HEAD
             <h1> 
                 <button id="btnEditAbout" class="btn-edit" onclick='editAbout()'>
                     <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
                 </button>
                 {{myAbout.name}}
             </h1>
+=======
+            <button id="btnEditAbout" class="btn-edit" onclick='editAbout()'>
+                <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
+            </button>
+            <h1> {{myAbout.name}} </h1>
+>>>>>>> backend
             <h3 id="titleText"> {{myAbout.title}} </h3>
         </aside>
         <article class="col-lg-8 ms-auto sobreMi title">
             <div class="bio">
                 <div class="edit">
+<<<<<<< HEAD
                     <h4>Sobre mi</h4>    
+=======
+                    <h4>Sobre mi</h4>
+>>>>>>> backend
                 </div>
                 <p id="aboutText">
                     {{myAbout.biography}}
@@ -35,6 +46,31 @@
         </article>
     </div>
 </section>
+<<<<<<< HEAD
 <section class="container-fluid" id="aboutForm">
     <app-edit-about></app-edit-about>
 </section>
+=======
+<section class="container-fluid" id="aboutForm" >
+    <h3>Editar datos</h3>
+    <form>
+        <label for="bannerCamp">Url de la imagen del banner:</label><br>
+        <input type="text" [placeholder]="myAbout.banner" id="bannerCamp" ><br>
+        <label for="photoCamp">Url de la foto:</label><br>
+        <input type="text" [placeholder]="myAbout.photo" id="photoCamp" ><br>
+        <label for="nameCamp">Nombre y apellido:</label><br>
+        <input type="text" [placeholder]="myAbout.name" id="nameCamp" ><br>
+        <label for="titleCamp">Título:</label><br>
+        <input type="text" [placeholder]="myAbout.title" id="titleCamp"><br>
+        <label for="biographyCamp">Sobre mí:</label><br>
+        <textarea type="text" [placeholder]="myAbout.biography" id="biographyCamp" rows="5"></textarea><br>
+        <label for="mailCamp">Email:</label><br>
+        <input type="text" [placeholder]="myAbout.mail" id="mailCamp" ><br>
+        <label for="telCamp">Teléfono:</label><br>
+        <input type="text" [placeholder]="myAbout.tel" id="telCamp" ><br>
+        <label for="addressCamp">Lugar de residencia:</label><br>
+        <input type="text" [placeholder]="myAbout.address" id="addressCamp" ><br><br>
+        <button type="submit">Modificar</button>
+    </form>
+</section>
+>>>>>>> backend
