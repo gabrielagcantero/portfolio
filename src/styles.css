@@ -1174,6 +1174,9 @@
     display: none;
   }
 
+  #aboutForm form{
+    padding-left: 30px;
+  }
   
   @media (min-width: 576px) {
     .col-sm {
