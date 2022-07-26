@@ -14,6 +14,8 @@ export class AboutComponent implements OnInit {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
       this.myAbout=data.about;
     });
+
+    
   }
 
 }
