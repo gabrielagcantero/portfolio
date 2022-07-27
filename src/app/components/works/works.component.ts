@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { JobsService } from 'src/app/services/jobs.service';
 
 @Component({
   selector: 'app-works',
@@ -8,11 +8,11 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class WorksComponent implements OnInit {
   myJobs:any;
-  constructor(private datosPortfolio:PortfolioService) {}
+  constructor(private jobsData:JobsService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.myJobs=data.jobs;
+    this.jobsData.obtenerDatos().subscribe(data => {
+      this.myJobs=data;
     });
   }
 

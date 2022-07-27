@@ -37,21 +37,21 @@
     <h3>Editar datos</h3>
     <form>
         <label for="bannerCamp">Url de la imagen del banner:</label><br>
-        <input type="text" [placeholder]="myAbout.banner" id="bannerCamp" ><br>
+        <input type="text" [value]="myAbout.banner"  id="bannerCamp" ><br>
         <label for="photoCamp">Url de la foto:</label><br>
-        <input type="text" [placeholder]="myAbout.photo" id="photoCamp" ><br>
+        <input type="text" [value]="myAbout.photo" id="photoCamp" ><br>
         <label for="nameCamp">Nombre y apellido:</label><br>
-        <input type="text" [placeholder]="myAbout.name" id="nameCamp" ><br>
+        <input type="text" [value]="myAbout.name" id="nameCamp" ><br>
         <label for="titleCamp">Título:</label><br>
-        <input type="text" [placeholder]="myAbout.title" id="titleCamp"><br>
-        <label for="biographyCamp">Sobre mí:</label><br>
-        <textarea type="text" [placeholder]="myAbout.biography" id="biographyCamp" rows="5"></textarea><br>
+        <input type="text" [value]="myAbout.title" id="titleCamp"><br>
+        <label for="aboutCamp">Sobre mí:</label><br>
+        <textarea type="text" [value]="myAbout.about" id="aboutCamp" rows="5"></textarea><br>
         <label for="mailCamp">Email:</label><br>
-        <input type="text" [placeholder]="myAbout.mail" id="mailCamp" ><br>
+        <input type="text" [value]="myAbout.mail" id="mailCamp" ><br>
         <label for="telCamp">Teléfono:</label><br>
-        <input type="text" [placeholder]="myAbout.tel" id="telCamp" ><br>
+        <input type="text" [value]="myAbout.tel" id="telCamp" ><br>
         <label for="addressCamp">Lugar de residencia:</label><br>
-        <input type="text" [placeholder]="myAbout.address" id="addressCamp" ><br><br>
+        <input type="text" [value]="myAbout.address" id="addressCamp" ><br><br>
         <button type="submit">Modificar</button>
     </form>
 </section>
