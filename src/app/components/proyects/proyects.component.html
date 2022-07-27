@@ -13,22 +13,22 @@
         <button onclick='addProyect2()'>Guardar</button>
     </form>
     <ul id="proyects">
-        <li class="row art artProyect" *ngFor="let proyect of myProyects">
+        <li class="row art artProyect" *ngFor="let project of myProjects">
             <!--ver iframe
             <iframe class="col-5"
                 [src]="proyect.iframe" width="444" height="250">
             </iframe>-->
             <div class="col desc">
                 <div class="edit">
-                    <p class="title">{{proyect.title}}</p>
+                    <p class="title">{{project.title}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{proyect.desc}}</p> 
-                <p>Puede verse el código <a [href]="proyect.link">aquí</a></p>
+                <p>{{project.description}}</p> 
+                <p>Puede verse el código <a [href]="project.link">aquí</a></p>
             </div>
         </li>
     </ul>

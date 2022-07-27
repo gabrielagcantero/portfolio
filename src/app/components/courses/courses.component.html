@@ -15,18 +15,18 @@
     <ul id="cursos">
         <li class="row art" *ngFor="let course of myCourses">
             <div class="col-3">
-                <img [src]="course.logo" class="logo">
+                <img [src]="course.inst.logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">{{course.name}}</p>
+                    <p class="title">{{course.inst.name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{course.date}}</p>
+                <p>Desde: {{course.dateFrom}} - Hasta: {{course.dateTo}}</p>
                 <p>{{course.title}}</p>
             </div>
         </li>

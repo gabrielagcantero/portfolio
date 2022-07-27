@@ -16,18 +16,18 @@
     <ul id="edus">
         <li class="row art artEdu" *ngFor="let education of myEducation">
             <div class="col-2">
-                <img [src]="education.logo" class="logo">
+                <img [src]="education.inst.logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">{{education.name}}</p>
+                    <p class="title">{{education.inst.name}}</p>
                     <div class="buttons">
                         <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{education.date}}</p>
+                <p>Desde: {{education.dateFrom}} - Hasta: {{education.dateTo}}</p>
                 <p>{{education.title}}</p>
                 <p>Promedio: {{education.prom}}</p>
             </div>
