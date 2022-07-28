@@ -3,27 +3,9 @@ function editAbout(){
     document.getElementById("aboutForm").style.display="block";
 };
 
-
-//cambia el valor de mi texto por el input
-function editAbout2(valor){
-    document.getElementById("aboutText").innerText=valor;
-};
-
-function editTitle2(valor){
-    document.getElementById("titleText").innerText=valor;
-};
-
-function editMail2(valor){
-    document.getElementById("mailText").innerText=valor;
-};
-
-function editTel2(valor){
-    document.getElementById("telText").innerText=valor;
-};
-
-function editDir2(valor){
-    document.getElementById("dirText").innerText=valor;
-};
+function hideForm(){
+    document.getElementById("aboutForm").style.display="none";
+}
 
 //muestra un formulario para agregar una eperiencia laboral
 function addExp(){

@@ -35,23 +35,43 @@
 </section>
 <section class="container-fluid" id="aboutForm" >
     <h3>Editar datos</h3>
-    <form>
-        <label for="bannerCamp">Url de la imagen del banner:</label><br>
-        <input type="text" [value]="myAbout.banner"  id="bannerCamp" ><br>
-        <label for="photoCamp">Url de la foto:</label><br>
-        <input type="text" [value]="myAbout.photo" id="photoCamp" ><br>
-        <label for="nameCamp">Nombre y apellido:</label><br>
-        <input type="text" [value]="myAbout.name" id="nameCamp" ><br>
-        <label for="titleCamp">Título:</label><br>
-        <input type="text" [value]="myAbout.title" id="titleCamp"><br>
-        <label for="aboutCamp">Sobre mí:</label><br>
-        <textarea type="text" [value]="myAbout.about" id="aboutCamp" rows="5"></textarea><br>
-        <label for="mailCamp">Email:</label><br>
-        <input type="text" [value]="myAbout.mail" id="mailCamp" ><br>
-        <label for="telCamp">Teléfono:</label><br>
-        <input type="text" [value]="myAbout.tel" id="telCamp" ><br>
-        <label for="addressCamp">Lugar de residencia:</label><br>
-        <input type="text" [value]="myAbout.address" id="addressCamp" ><br><br>
-        <button type="submit">Modificar</button>
+    <form [formGroup]="editPerson" (ngSubmit)="sendForm(editPerson.value)">
+        <div class="form-group">
+            <label for="banner">Url de la imagen del banner:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.banner" formControlName="banner" >
+        </div>
+        <div class="form-group">
+            <label for="photo">Url de la foto:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.photo" formControlName="photo" >
+        </div>
+        <div class="form-group">
+            <label for="name">Nombre y apellido:</label><br>
+            <input type="text" class="form-control"  formControlName="name" [placeholder]="myAbout.name">
+        </div>
+        <div class="form-group">
+            <label for="title">Título:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.title" formControlName="title">
+        </div>
+        <div class="form-group">
+            <label for="about">Sobre mí:</label><br>
+            <textarea type="text" class="form-control" [placeholder]="myAbout.about" formControlName="about" rows="5"></textarea>
+        </div>  
+        <div class="form-group">
+            <label for="mail">Email:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.mail" formControlName="mail" >
+        </div>
+        <div class="form-group">
+            <label for="tel">Teléfono:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.tel" formControlName="tel" >
+        </div>
+        <div class="form-group">
+            <label for="address">Lugar de residencia:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.address" formControlName="address" >
+        </div>
+        <div class="form-group">
+            <label for="skills">Url de la imagen con las habilidades:</label><br>
+            <input type="text" class="form-control" [placeholder]="myAbout.skills" formControlName="skills" ><br>
+        </div>
+        <button type="submit" onclick="hideForm()">Modificar</button>
     </form>
 </section>

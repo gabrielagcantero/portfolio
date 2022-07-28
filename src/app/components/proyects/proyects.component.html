@@ -12,11 +12,11 @@
         <input id="linkProyect" type="text" placeholder="link al repositorio del proyecto"><br>
         <button onclick='addProyect2()'>Guardar</button>
     </form>
-    <ul id="proyects">
+    <ul id="projects">
         <li class="row art artProyect" *ngFor="let project of myProjects">
             <!--ver iframe
             <iframe class="col-5"
-                [src]="proyect.iframe" width="444" height="250">
+                [src]="project.iframe" width="444" height="250">
             </iframe>-->
             <div class="col desc">
                 <div class="edit">
