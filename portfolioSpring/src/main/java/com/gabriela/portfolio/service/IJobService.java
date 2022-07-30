@@ -14,5 +14,11 @@ import java.util.List;
 public interface IJobService {
 
     public List<Job> showJobs();
+
+    public void addJob(Job j);
+
+    public void editJob(Job j);
+
+    public void deleteJob(Long id);
     
 }

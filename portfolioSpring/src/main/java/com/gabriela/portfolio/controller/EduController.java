@@ -9,6 +9,8 @@ import com.gabriela.portfolio.service.IEduService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +28,10 @@ public class EduController {
     @ResponseBody
     public List<Education> showJobs(){
         return eduServ.showEdus();
+    }
+    
+    @PostMapping("/add/education")
+    public void addEducation(@RequestBody Education edu){
+        eduServ.addEdu(edu);
     }
 }

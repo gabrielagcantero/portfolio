@@ -1169,7 +1169,7 @@
     margin: 10px;
   }
   
-  #logout, #aboutForm{
+  #logout, #aboutForm, .editExpForm{
     display: none;
   }
   

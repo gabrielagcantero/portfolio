@@ -24,4 +24,19 @@ public class JobService implements IJobService {
     public List<Job> showJobs(){
         return jobRepo.findAll();
     }
+
+    @Override
+    public void addJob(Job j) {
+        jobRepo.save(j);
+    }
+
+    @Override
+    public void editJob(Job j) {
+        jobRepo.save(j);
+    }
+
+    @Override
+    public void deleteJob(Long id) {
+        jobRepo.deleteById(id);
+    }
 }

@@ -3,6 +3,7 @@ function editAbout(){
     document.getElementById("aboutForm").style.display="block";
 };
 
+//oculta el frmulario
 function hideForm(){
     document.getElementById("aboutForm").style.display="none";
 }
@@ -12,40 +13,24 @@ function addExp(){
     document.getElementById("addExpForm").style.display="block";
 }
 
-//recupera los datos del input y agrega una experiencia
 function addExp2(){
-    event.preventDefault();//evita que refresque
-    document.getElementById("addExpForm").style.display="none";//oculta el frmulario
-
-    //guarda los valores
-    let logo = document.getElementById("logoExp").value;
-    let nombre = document.getElementById("nombreExp").value;
-    let fecha = document.getElementById("fechaExp").value;
-    let puesto = document.getElementById("puestoExp").value;
-    let tareas = document.getElementById("tareasExp").value;
-
-    let exp = document.getElementById("exps"); //toma el elemento dende se va a agregrar 
-    let art = document.createElement("article"); //crea el elemento a agregr
-    art.className="row art artExp"; //asigna clase al elemento creado
-    //html del elemento creado
-    art.innerHTML='<div class="col-2"><img class="logo logoExp2"></div><div class="col info"><div class="edit"><p class="title nombreExp2"></p><div class="buttons"><button class="btn-edit" style="display:block" onclick="deletes(this)"><img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit"></button></div></div><p class="fechaExp2"></p><p class="puestoExp2"></p><p class="tareasExp2"></p></div>';
-    exp.appendChild(art); //agrega el elemento creado
-
-    //pone valores en el elemento creado
-    let l= document.getElementsByClassName("logoExp2").length;
-    document.getElementsByClassName("logoExp2")[l-1].src=logo;
-    document.getElementsByClassName("nombreExp2")[l-1].innerText=nombre;
-    document.getElementsByClassName("fechaExp2")[l-1].innerText=fecha;
-    document.getElementsByClassName("puestoExp2")[l-1].innerText=puesto;
-    document.getElementsByClassName("tareasExp2")[l-1].innerText=tareas;
-
-    //borra lo escrito en los campos para que se vean los placeholdres
-    document.getElementById("logoExp").value="";
-    document.getElementById("nombreExp").value="";
-    document.getElementById("fechaExp").value="";
-    document.getElementById("puestoExp").value="";
-    document.getElementById("tareasExp").value="";
+    document.getElementById("addExpForm").style.display="none";
 }
+
+//muestra un formulario para agregar una eperiencia laboral
+function showEditExp(btn){
+    let btns = Array.from(document.getElementsByClassName("btnEditExp"));
+    let pos = btns.indexOf(btn);
+    let forms = Array.from(document.getElementsByClassName("editExpForm"));
+    forms[pos].style.display="block";
+}
+
+//function editExp2(btn){
+//    let btns = Array.from(document.getElementsByClassName("btnEditExp2"));
+//    let pos = btns.indexOf(btn);
+//    let forms = Array.from(document.getElementsByClassName("editExpForm"));
+//    forms[pos].style.display="none";
+//}
 
 //muestra un formulario para agregar una educacion formal
 function addEdu(){

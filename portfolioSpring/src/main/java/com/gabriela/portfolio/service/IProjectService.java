@@ -14,5 +14,7 @@ import java.util.List;
 public interface IProjectService {
 
     public List<Project> showProjects();
+
+    public void addProject(Project proj);
     
 }

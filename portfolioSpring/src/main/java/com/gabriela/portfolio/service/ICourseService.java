@@ -14,5 +14,7 @@ import java.util.List;
 public interface ICourseService {
 
     public List<Course> showCourses();
+
+    public void addCourse(Course cour);
     
 }

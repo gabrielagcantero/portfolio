@@ -24,5 +24,10 @@ public class EduService implements IEduService {
     public List<Education> showEdus() {
         return eduRepo.findAll();
     }
+
+    @Override
+    public void addEdu(Education edu) {
+        eduRepo.save(edu);
+    }
     
 }

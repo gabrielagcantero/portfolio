@@ -14,5 +14,7 @@ import java.util.List;
 public interface IEduService {
 
     public List<Education> showEdus();
+
+    public void addEdu(Education edu);
     
 }

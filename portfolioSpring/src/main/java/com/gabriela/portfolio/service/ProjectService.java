@@ -24,5 +24,10 @@ public class ProjectService implements IProjectService {
     public List<Project> showProjects() {
         return projRepo.findAll();
     }
+
+    @Override
+    public void addProject(Project proj) {
+        projRepo.save(proj);
+    }
     
 }

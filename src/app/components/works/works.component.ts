@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup,} from '@angular/forms';
 import { JobsService } from 'src/app/services/jobs.service';
 
 @Component({
@@ -7,8 +8,32 @@ import { JobsService } from 'src/app/services/jobs.service';
   styleUrls: ['./works.component.css']
 })
 export class WorksComponent implements OnInit {
-  myJobs:any;
+
   constructor(private jobsData:JobsService) {}
+
+  myJobs:any;
+
+  addExpForm = new FormGroup({
+    idJob: new FormControl(""),
+    logo: new FormControl(""),
+    name: new FormControl(""),
+    dateFrom: new FormControl(""),
+    dateTo: new FormControl(""),
+    job: new FormControl(""),
+    tasks: new FormControl(""),
+  })
+
+  editExpForm = new FormGroup({
+    idJob: new FormControl(""),
+    logo: new FormControl(""),
+    name: new FormControl(""),
+    dateFrom: new FormControl(""),
+    dateTo: new FormControl(""),
+    job: new FormControl(""),
+    tasks: new FormControl(""),
+  })
+
+  
 
   ngOnInit(): void {
     this.jobsData.obtenerDatos().subscribe(data => {
@@ -16,4 +41,28 @@ export class WorksComponent implements OnInit {
     });
   }
 
+  addExp(form:any){
+    this.jobsData.addExp2(form).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    })
+  }
+
+  editExp(form:any, id:String){
+    
+    this.jobsData.editExp2(form, id).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    });
+    }
+
+  deleteExp(id:String){
+    this.jobsData.deleteExp2(id).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    });
+  }
 }
+  
+
+
