@@ -62,6 +62,34 @@ export class WorksComponent implements OnInit {
       this.ngOnInit();
     });
   }
+
+  showEditExp(btn:FormGroup, id:String){
+    let pos:number = 0;
+    let jobs = Array.from(this.myJobs);
+    this.myJobs.forEach((job: any) => {
+      if (id === job.idJob){
+        pos = jobs.indexOf(job);
+      }
+    });
+    btn.patchValue({idJob: this.myJobs[pos].idJob, logo: this.myJobs[pos].logo, 
+      name: this.myJobs[pos].name, dateFrom:this.myJobs[pos].dateFrom, dateTo:this.myJobs[pos].dateTo, 
+      job: this.myJobs[pos].job, tasks:this.myJobs[pos].tasks
+    });
+  }
+
+  editJob(form:any, id:String){
+    this.jobsData.editExp2(form, id).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    });
+  }
+
+  deleteJob(id:String){
+    this.jobsData.deleteExp2(id).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    });
+  }
 }
   
 

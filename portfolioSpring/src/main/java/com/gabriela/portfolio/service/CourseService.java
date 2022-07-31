@@ -29,5 +29,15 @@ public class CourseService implements ICourseService {
     public void addCourse(Course cour) {
         couRepo.save(cour);
     }
+
+    @Override
+    public void editCourse(Course c) {
+        couRepo.save(c);
+    }
+
+    @Override
+    public void deleteCourse(Long id) {
+        couRepo.deleteById(id);
+    }
     
 }

@@ -28,7 +28,7 @@ public class Course {
     
     @ManyToOne
     @JoinColumn(name="idInstitute")
-    private Institute inst;
+    public Institute inst;
     
     private Date dateFrom;
     private Date dateTo;

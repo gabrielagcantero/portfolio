@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { defaultIfEmpty } from 'rxjs';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class AboutComponent implements OnInit {
 
   editPerson = new FormGroup({
     idPerson: new FormControl("1"),
-    banner: new FormControl(""),
+    banner: new FormControl("", defaultIfEmpty),
     photo: new FormControl(""),
     name: new FormControl(""),
     title: new FormControl(""),
@@ -34,7 +35,18 @@ export class AboutComponent implements OnInit {
 
   }
 
+  editAbout(){
+    let myDiv:any = document.querySelector("#aboutFormDiv") ;
+    myDiv.style.display="block";
+    this.editPerson.patchValue({idPerson: this.myAbout.idPerson, banner: this.myAbout.banner, 
+    photo: this.myAbout.photo, name:this.myAbout.name, title:this.myAbout.title, 
+    about:this.myAbout.about, mail:this.myAbout.mail, tel:this.myAbout.tel, 
+    address: this.myAbout.address, skills: this.myAbout.skills});
+  }
+
   sendForm(form:any){
+    let myDiv:any = document.querySelector("#aboutFormDiv") ;
+    myDiv.style.display="none";
     this.datosPortfolio.editPerson(form).subscribe(data=> {
       console.log(data);
       this.ngOnInit();

@@ -29,5 +29,15 @@ public class ProjectService implements IProjectService {
     public void addProject(Project proj) {
         projRepo.save(proj);
     }
+
+    @Override
+    public void editProject(Project p) {
+        projRepo.save(p);
+    }
+
+    @Override
+    public void deleteProject(Long id) {
+        projRepo.deleteById(id);
+    }
     
 }

@@ -16,5 +16,9 @@ public interface ICourseService {
     public List<Course> showCourses();
 
     public void addCourse(Course cour);
+
+    public void editCourse(Course c);
+
+    public void deleteCourse(Long id);
     
 }

@@ -6,11 +6,15 @@ package com.gabriela.portfolio.controller;
 
 import com.gabriela.portfolio.model.Education;
 import com.gabriela.portfolio.service.IEduService;
+import static java.lang.Long.parseLong;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,5 +37,18 @@ public class EduController {
     @PostMapping("/add/education")
     public void addEducation(@RequestBody Education edu){
         eduServ.addEdu(edu);
+    }
+    
+    @PutMapping("/edit/education")
+    public void editEducation(@RequestBody Education e, @RequestParam String idEducation){
+        Long id = parseLong(idEducation);
+        e.setIdEducation(id);
+        eduServ.editEducation(e);
+    }
+    
+    @DeleteMapping("delete/education")
+    public void deleteEducation(@RequestBody String idEducation){
+        Long id = parseLong(idEducation);
+        eduServ.deleteEducation(id);
     }
 }

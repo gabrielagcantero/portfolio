@@ -1122,7 +1122,6 @@
   .btn-edit{
     margin: 0px;
     padding: 0px;
-    display: none;
   }
   
   .buttons{
@@ -1169,7 +1168,8 @@
     margin: 10px;
   }
   
-  #logout, #aboutForm, .editExpForm{
+  #logout, #aboutFormDiv, .editExpForm,
+  .editCourseForm{
     display: none;
   }
   

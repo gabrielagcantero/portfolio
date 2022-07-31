@@ -16,5 +16,9 @@ public interface IProjectService {
     public List<Project> showProjects();
 
     public void addProject(Project proj);
+
+    public void editProject(Project p);
+
+    public void deleteProject(Long id);
     
 }

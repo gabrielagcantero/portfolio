@@ -29,5 +29,15 @@ public class EduService implements IEduService {
     public void addEdu(Education edu) {
         eduRepo.save(edu);
     }
+
+    @Override
+    public void editEducation(Education e) {
+        eduRepo.save(e);
+    }
+
+    @Override
+    public void deleteEducation(Long id) {
+        eduRepo.deleteById(id);
+    }
     
 }

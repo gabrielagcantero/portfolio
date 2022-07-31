@@ -4,21 +4,15 @@
  */
 package com.gabriela.portfolio.service;
 
-import com.gabriela.portfolio.model.Education;
+import com.gabriela.portfolio.model.Institute;
 import java.util.List;
 
 /**
  *
  * @author Gabriela
  */
-public interface IEduService {
+public interface IInstService {
 
-    public List<Education> showEdus();
-
-    public void addEdu(Education edu);
-
-    public void editEducation(Education e);
-
-    public void deleteEducation(Long id);
+    public List<Institute> showInstitutes();
     
 }

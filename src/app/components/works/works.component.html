@@ -45,7 +45,7 @@
                         <button type="submit" class="btn-edit" (click)="deleteExp(job.idJob)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
                         </button>
-                        <button class="btn-edit btnEditExp" onclick="showEditExp(this)">
+                        <button class="btn-edit btnEditExp" (click)="showEditExp(this.editExpForm, job.idJob)" onclick="showEditExp(this)">
                             <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
@@ -55,14 +55,14 @@
                 <p>{{job.tasks}}</p>
             </div>
             <div>
-                <form [formGroup]="editExpForm" (ngSubmit)="editExp(editExpForm.value, job.idJob)" class="editExpForm">
+                <form [formGroup]="editExpForm" (ngSubmit)="editExp(this.editExpForm.value, job.idJob)" class="editExpForm">
                     <div class="form-group">
                         <label for="logo">Url del logo de la empresa:</label><br>
                         <input type="text"  class="form-control" formControlName="logo" [placeholder]="job.logo">
                     </div>
                     <div class="form-group">
                         <label for="name">Nombre de la empresa:</label><br>
-                        <input type="text" ngDefaultControl [(ngModel)]="job.name" class="form-control" formControlName="name" [placeholder]="job.name">
+                        <input type="text" class="form-control" formControlName="name" [placeholder]="job.name">
                     </div>
                     <div class="form-group">
                         <label for="dateFrom">Fecha de inicio:</label><br>
@@ -80,7 +80,7 @@
                         <label for="tasks">Tareas desarrolladas:</label><br>
                         <input type="text" class="form-control" formControlName="tasks" [placeholder]="job.tasks"><br>
                     </div>
-                    <button type="submit" onclick='editExp2()' class="btnEditExp2">Editar</button>
+                    <button type="submit" onclick='hideEditExp(this)' class="btnEditExp2">Editar</button>
                 </form>
             </div>
         </li>
