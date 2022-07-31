@@ -1,0 +1,12 @@
+com\gabriela\portfolio\controller\JobController.class
+com\gabriela\portfolio\model\Job.class
+com\gabriela\portfolio\controller\Controller.class
+com\gabriela\portfolio\service\IJobService.class
+com\gabriela\portfolio\model\Person.class
+com\gabriela\portfolio\service\PersonService.class
+com\gabriela\portfolio\repository\PersonRepository.class
+com\gabriela\portfolio\repository\JobRepository.class
+com\gabriela\portfolio\PortfolioApplication.class
+com\gabriela\portfolio\PortfolioApplication$1.class
+com\gabriela\portfolio\service\JobService.class
+com\gabriela\portfolio\service\IPersonService.class
