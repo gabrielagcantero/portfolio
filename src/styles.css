@@ -1122,6 +1122,7 @@
   .btn-edit{
     margin: 0px;
     padding: 0px;
+    display: none;
   }
   
   .buttons{
@@ -1133,6 +1134,7 @@
   
   form{
     align-items: center;
+    padding: 40px;
   }
   
   form input{
@@ -1168,9 +1170,12 @@
     margin: 10px;
   }
   
-  #logout, #aboutFormDiv, .editExpForm,
-  .editCourseForm{
+  #logout, #aboutForm{
     display: none;
+  }
+
+  #aboutForm form{
+    padding-left: 30px;
   }
   
   @media (min-width: 576px) {
@@ -2500,8 +2505,6 @@
     transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    width: 70%;
-    border-radius: 10px;
   }
   
   @media (prefers-reduced-motion: reduce) {

@@ -1,7 +1,14 @@
 <section class="container-fluid">
     <div class="edit">
         <h3>Hard & Soft Skills</h3>
+        <button class="btn-edit" onclick="modifySkills()">
+            <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
+        </button>
     </div>
+    <form id="modifySkillsForm" style="display: none">
+        <input id="skillsImg" type="text" placeholder="Url de la imagen con las skills"><br>
+        <button onclick='modifySkills2()'>Modificar</button>
+    </form>
     <div>
         <article class="row art">
             <div class="col gifContainer">

@@ -1,69 +1,33 @@
 <section class="container-fluid">
     <div class="edit">
         <h3>Cursos</h3>
-        <button class="btn-edit" onclick='addCourse()'>
+        <button class="btn-edit" onclick='addCurso()'>
             <img src="https://i.ibb.co/sQYnq8j/add.png" alt="edit" class="icon">
         </button>
     </div>
-    <form [formGroup]="addCourseForm" (ngSubmit)="addCourse(addCourseForm.value)" id="addCourseForm" style="display: none">
-        <div class="form-group">
-            <label for="idInstitute">Institución:</label><br>
-            <input type="text" class="form-control" formControlName="idInstitute" >
-        </div>
-        <div class="form-group">
-            <label for="dateFrom">Fecha de inicio:</label><br>
-            <input type="date" class="form-control"  formControlName="dateFrom">
-        </div>
-        <div class="form-group">
-            <label for="dateTo">Fecha de fin:</label><br>
-            <input type="date" class="form-control" formControlName="dateTo">
-        </div>
-        <div class="form-group">
-            <label for="title">Nombre del curso:</label><br>
-            <input type="text" class="form-control" formControlName="title">
-        </div>  
-        <button type="submit" onclick='addCourse2()'>Agregar</button>
+    <form id="addCursoForm" style="display: none">
+        <input id="logoCurso" type="text" placeholder="Url del logo de la institución"><br>
+        <input id="nombreCurso" type="text" placeholder="Nombre de la institución"><br>
+        <input id="fechaCurso" type="text" placeholder="mes/año de inicio - mes/año de finalización"><br>
+        <input id="tituloCurso" type="text" placeholder="Nombre del curso"><br>
+        <button onclick='addCurso2()'>Guardar</button>
     </form>
     <ul id="cursos">
         <li class="row art" *ngFor="let course of myCourses">
             <div class="col-3">
-                <img [src]="course.inst.logo" class="logo">
+                <img [src]="course.logo" class="logo">
             </div>
             <div class="col info">
                 <div class="edit">
-                    <p class="title">{{course.inst.name}}</p>
+                    <p class="title">{{course.name}}</p>
                     <div class="buttons">
-                        <button type="submit" class="btn-edit" (click)="deleteCourse(course.idCourse)">
+                        <button class="btn-edit" onclick="deletes(this)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
-                        </button>
-                        <button class="btn-edit btnEditCourse" onclick="showEditCourse(this)">
-                            <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>Desde: {{course.dateFrom}} - Hasta: {{course.dateTo}}</p>
+                <p>{{course.date}}</p>
                 <p>{{course.title}}</p>
-            </div>
-            <div>
-                <form [formGroup]="editCourseForm" (ngSubmit)="editCourse(editCourseForm.value, course.idCourse)" class="editCourseForm">
-                    <div class="form-group">
-                        <label for="idInstitute">Institución:</label><br>
-                        <input type="text" class="form-control" formControlName="idInstitute" >
-                    </div>
-                    <div class="form-group">
-                        <label for="dateFrom">Fecha de inicio:</label><br>
-                        <input type="date" class="form-control"  formControlName="dateFrom" [placeholder]="course.dateFrom">
-                    </div>
-                    <div class="form-group">
-                        <label for="dateTo">Fecha de fin:</label><br>
-                        <input type="date" class="form-control"  formControlName="dateTo" [placeholder]="course.dateTo">
-                    </div>
-                    <div class="form-group">
-                        <label for="title">Nombre del curso:</label><br>
-                        <input type="text" class="form-control" formControlName="title" [placeholder]="course.title">
-                    </div>  
-                    <button type="submit" onclick='editCourse2()' class="btnEditCourse2">Editar</button>
-                </form>
             </div>
         </li>
     </ul>

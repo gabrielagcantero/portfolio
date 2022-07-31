@@ -7,19 +7,21 @@
     <div class="row">
         <aside class="col-4">
             <img [src]="myAbout.photo" alt="Mi foto" id="miFoto">
-            <button id="btnEditAbout" class="btn-edit" (click)='editAbout()'>
-                <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
-            </button>
-            <h1> {{myAbout.name}} </h1>
+            <h1> 
+                <button id="btnEditAbout" class="btn-edit" onclick='editAbout()'>
+                    <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon">
+                </button>
+                {{myAbout.name}}
+            </h1>
             <h3 id="titleText"> {{myAbout.title}} </h3>
         </aside>
         <article class="col-lg-8 ms-auto sobreMi title">
             <div class="bio">
                 <div class="edit">
-                    <h4>Sobre mi</h4>
+                    <h4>Sobre mi</h4>    
                 </div>
                 <p id="aboutText">
-                    {{myAbout.about}}
+                    {{myAbout.biography}}
                 </p>
             </div>
             <div class="contact">
@@ -33,45 +35,27 @@
         </article>
     </div>
 </section>
-<section class="container-fluid" id="aboutFormDiv" >
-    <h3>Editar datos</h3>
-    <form [formGroup]="editPerson" id="aboutForm" (ngSubmit)="sendForm(editPerson.value)">
-        <div class="form-group">
-            <label for="banner">Url de la imagen del banner:</label><br>
-            <input type="text" class="form-control" [placeholder]="myAbout.banner" formControlName="banner" >
-        </div>
-        <div class="form-group">
-            <label for="photo">Url de la foto:</label><br>
-            <input type="text" class="form-control"  [placeholder]="myAbout.photo" formControlName="photo" >
-        </div>
-        <div class="form-group">
-            <label for="name">Nombre y apellido:</label><br>
-            <input type="text" class="form-control"  formControlName="name" [placeholder]="myAbout.name">
-        </div>
-        <div class="form-group">
-            <label for="title">Título:</label><br>
-            <input type="text" class="form-control" [placeholder]="myAbout.title" formControlName="title">
-        </div>
-        <div class="form-group">
-            <label for="about">Sobre mí:</label><br>
-            <textarea type="text" class="form-control" [placeholder]="myAbout.about" formControlName="about" rows="5"></textarea>
-        </div>  
-        <div class="form-group">
-            <label for="mail">Email:</label><br>
-            <input type="text" class="form-control" [placeholder]="myAbout.mail" formControlName="mail" >
-        </div>
-        <div class="form-group">
-            <label for="tel">Teléfono:</label><br>
-            <input type="text" class="form-control" [placeholder]="myAbout.tel" formControlName="tel" >
-        </div>
-        <div class="form-group">
-            <label for="address">Lugar de residencia:</label><br>
-            <input type="text" class="form-control" [placeholder]="myAbout.address" formControlName="address" >
-        </div>
-        <div class="form-group">
-            <label for="skills">Url de la imagen con las habilidades:</label><br>
-            <input type="text" class="form-control" [placeholder]="myAbout.skills" formControlName="skills" ><br>
-        </div>
-        <button type="submit">Modificar</button>
-    </form>
+<section class="container-fluid" id="aboutForm" >
+    <div class="row">
+        <h3>Editar datos</h3>
+        <form>
+            <label for="bannerCamp">Url de la imagen del banner:</label><br>
+            <input type="text" [placeholder]="myAbout.banner" id="bannerCamp" ><br>
+            <label for="photoCamp">Url de la foto:</label><br>
+            <input type="text" [placeholder]="myAbout.photo" id="photoCamp" ><br>
+            <label for="nameCamp">Nombre y apellido:</label><br>
+            <input type="text" [placeholder]="myAbout.name" id="nameCamp" ><br>
+            <label for="titleCamp">Título:</label><br>
+            <input type="text" [placeholder]="myAbout.title" id="titleCamp"><br>
+            <label for="biographyCamp">Sobre mí:</label><br>
+            <textarea type="text" [placeholder]="myAbout.biography" id="biographyCamp" rows="5"></textarea><br>
+            <label for="mailCamp">Email:</label><br>
+            <input type="text" [placeholder]="myAbout.mail" id="mailCamp" ><br>
+            <label for="telCamp">Teléfono:</label><br>
+            <input type="text" [placeholder]="myAbout.tel" id="telCamp" ><br>
+            <label for="addressCamp">Lugar de residencia:</label><br>
+            <input type="text" [placeholder]="myAbout.address" id="addressCamp" ><br><br>
+            <button type="submit">Modificar</button>
+        </form>
+    </div>
 </section>
