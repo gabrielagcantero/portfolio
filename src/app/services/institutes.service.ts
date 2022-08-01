@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PortfolioService {
+export class InstitutesService {
 
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('https://cantero-portfolio-back.herokuapp.com/show/person');
+    return this.http.get('https://cantero-portfolio-back.herokuapp.com/show/institutes');
   }
 }
