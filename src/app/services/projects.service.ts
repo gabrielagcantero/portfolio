@@ -10,15 +10,15 @@ export class ProjectsService {
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('http://localhost:8080/show/projects');
+    return this.http.get('https://cantero-portfolio-back.herokuapp.com/show/projects');
   }
 
   addProject2(form: any):Observable<any>{
-    return this.http.post('http://localhost:8080/add/project', form);
+    return this.http.post('https://cantero-portfolio-back.herokuapp.com/add/project', form);
   }
 
   editProject2(form: any, id:any):Observable<any>{
-    return this.http.put('http://localhost:8080/edit/project/?idProject=' + id, form);
+    return this.http.put('https://cantero-portfolio-back.herokuapp.com/edit/project/?idProject=' + id, form);
   }
 
   deleteProject2(id:String):Observable<any>{
@@ -28,6 +28,6 @@ export class ProjectsService {
       }),
       body: id
     }
-    return this.http.delete('http://localhost:8080/delete/project', options);
+    return this.http.delete('https://cantero-portfolio-back.herokuapp.com/delete/project', options);
   }
 }
