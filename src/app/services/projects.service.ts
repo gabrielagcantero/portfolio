@@ -10,7 +10,7 @@ export class ProjectsService {
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('http://localhost:8080/show/projects');
+    return this.http.get('https://gcantero-portfolio.herokuapp.com/show/projects');
   }
 
   addProject2(form: any):Observable<any>{

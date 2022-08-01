@@ -11,10 +11,10 @@ export class PortfolioService {
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('http://localhost:8080/show/person');
+    return this.http.get('https://gcantero-portfolio.herokuapp.com/show/person');
   }
 
   editPerson(form: any):Observable<any>{
-    return this.http.put('http://localhost:8080/edit/person', form);
+    return this.http.put('https://gcantero-portfolio.herokuapp.com/edit/person', form);
   }
 }
