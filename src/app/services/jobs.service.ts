@@ -10,15 +10,15 @@ export class JobsService {
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('http://localhost:8080/show/jobs');
+    return this.http.get('https://gcantero-portfolio.herokuapp.com/show/jobs');
   }
 
   addExp2(form: any):Observable<any>{
-    return this.http.post('http://localhost:8080/add/job', form);
+    return this.http.post('https://gcantero-portfolio.herokuapp.com/add/job', form);
   }
 
   editExp2(form: any, id:any):Observable<any>{
-    return this.http.put('http://localhost:8080/edit/job/?idJob=' + id, form);
+    return this.http.put('https://gcantero-portfolio.herokuapp.com/edit/job/?idJob=' + id, form);
   }
 
   deleteExp2(id:String):Observable<any>{
@@ -28,6 +28,6 @@ export class JobsService {
       }),
       body: id
     }
-    return this.http.delete('http://localhost:8080/delete/job', options);
+    return this.http.delete('https://gcantero-portfolio.herokuapp.com/delete/job', options);
   }
 }
