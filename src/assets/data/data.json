@@ -4,10 +4,11 @@
         "photo": "https://i.ibb.co/x39MXG7/foto.jpg",
         "name": "Gabriela Cantero",
         "title": "Desarrolladora Web Full Stack Jr.",
-        "biography": "Soy una desarrolladora jr. en busca de mi primer empleo en este área. He tomado algunos cursos de desarrollo y actualmente estoy cursando la carrera de Analista Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.",
+        "about": "Soy una desarrolladora jr. en busca de mi primer empleo en este área. He tomado algunos cursos de desarrollo y actualmente estoy cursando la carrera de Analista Programador Universitario. Me encanta leer, la lógica y los juegos de mesa.",
         "mail": "gabrielagcantero@gmail.com",
         "tel": "+54 9 11 39475470",
-        "address": "Gonnet, Bs. As."
+        "address": "Gonnet, Bs. As.",
+        "skills": "https://i.ibb.co/dbjwVsN/Habilidades.gif"
     },
 
     "jobs":[{
@@ -69,7 +70,6 @@
         "date": "Marzo 2018 - Diciembre 2018",
         "title": "Programación en JAVA"  
     }],
-    "skills": "https://i.ibb.co/dbjwVsN/Habilidades.gif",
     "proyects": [{
         "iframe": "https://happy-minsky-a602b9.netlify.app/index.html",
         "title": "Jane Austen page",

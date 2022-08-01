@@ -1,34 +1,70 @@
 <section class="container-fluid">
     <div class="edit">
         <h3>Proyectos</h3>
-        <button class="btn-edit" onclick="addProyect()">
+        <button class="btn-edit" (click)="showProjectForm()">
             <img src="https://i.ibb.co/sQYnq8j/add.png" alt="edit" class="icon">
         </button>
     </div>
-    <form id="addProyectForm" style="display: none">
-        <input id="imgProyect" type="text" placeholder="Url de la página o presentación del proyecto"><br>
-        <input id="nombreProyect" type="text" placeholder="Nombre del proyecto"><br>
-        <textarea id="descProyect" placeholder="Descripción" rows="5"></textarea><br>
-        <input id="linkProyect" type="text" placeholder="link al repositorio del proyecto"><br>
-        <button onclick='addProyect2()'>Guardar</button>
+    <form [formGroup]="addProjectForm" (ngSubmit)="addProject(addProjectForm.value)" id="addProjectForm" style="display: none">
+        <div class="form-group">
+            <label for="title">Nombre del proyecto:</label><br>
+            <input type="text" class="form-control" formControlName="title" >
+        </div>
+        <div class="form-group">
+            <label for="iframe">Url del proyecto funcionando:</label><br>
+            <input type="text" class="form-control"  formControlName="iframe">
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción:</label><br>
+            <input type="text" class="form-control" formControlName="description">
+        </div>
+        <div class="form-group">
+            <label for="link">Url del repositorio con el código:</label><br>
+            <input type="text" class="form-control" formControlName="link">
+        </div>  
+        <button type="submit">Agregar</button>
     </form>
-    <ul id="proyects">
-        <li class="row art artProyect" *ngFor="let proyect of myProyects">
+    <ul id="projects">
+        <li class="row art artProyect" *ngFor="let project of myProjects">
             <!--ver iframe
             <iframe class="col-5"
-                [src]="proyect.iframe" width="444" height="250">
+                [src]="project.iframe" width="444" height="250">
             </iframe>-->
             <div class="col desc">
                 <div class="edit">
-                    <p class="title">{{proyect.title}}</p>
+                    <p class="title">{{project.title}}</p>
                     <div class="buttons">
-                        <button class="btn-edit" onclick="deletes(this)">
+                        <button class="btn-edit" (click)="deleteProject(project.idProject)">
                             <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
+                        </button>
+                        <button class="btn-edit btnEditProject" (click)="showEditProject(this.editProjectForm, project.idProject)" onclick="showEditProject(this)">
+                            <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon-edit">
                         </button>
                     </div>
                 </div>
-                <p>{{proyect.desc}}</p> 
-                <p>Puede verse el código <a [href]="proyect.link">aquí</a></p>
+                <p>{{project.description}}</p> 
+                <p>Puede verse el código <a [href]="project.link">aquí</a></p>
+            </div>
+            <div>
+                <form [formGroup]="editProjectForm" class="editProjectForm" [name]="project.idProject" (ngSubmit)="editProject(editProjectForm.value, project.idProject)" style="display: none">
+                    <div class="form-group">
+                        <label for="title">Nombre del proyecto:</label><br>
+                        <input type="text" class="form-control" formControlName="title" >
+                    </div>
+                    <div class="form-group">
+                        <label for="iframe">Url del proyecto funcionando:</label><br>
+                        <input type="text" class="form-control"  formControlName="iframe">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción:</label><br>
+                        <input type="text" class="form-control" formControlName="description">
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Url del repositorio con el código:</label><br>
+                        <input type="text" class="form-control" formControlName="link">
+                    </div>  
+                    <button class="btnHideProject" type="submit" onclick='hideEditProject(this)'>Agregar</button>
+                </form>
             </div>
         </li>
     </ul>
