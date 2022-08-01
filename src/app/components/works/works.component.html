@@ -1,0 +1,88 @@
+<section class="container-fluid">
+    <div class="edit">
+        <h3>Últimas Experiencias Laborales</h3>
+        <button class="btn-edit" onclick='addExp()' >
+            <img src="https://i.ibb.co/sQYnq8j/add.png" alt="edit" class="icon">
+        </button>
+    </div>
+    <form [formGroup]="addExpForm" (ngSubmit)="addExp(addExpForm.value)" id="addExpForm" style="display: none">
+        <div class="form-group">
+            <label for="logo">Url del logo de la empresa:</label><br>
+            <input type="text" class="form-control" formControlName="logo">
+        </div>
+        <div class="form-group">
+            <label for="name">Nombre de la empresa:</label><br>
+            <input type="text" class="form-control" formControlName="name" >
+        </div>
+        <div class="form-group">
+            <label for="dateFrom">Fecha de inicio:</label><br>
+            <input type="date" class="form-control"  formControlName="dateFrom">
+        </div>
+        <div class="form-group">
+            <label for="dateTo">Fecha de fin:</label><br>
+            <input type="date" class="form-control" formControlName="dateTo">
+        </div>
+        <div class="form-group">
+            <label for="job">Nombre del puesto:</label><br>
+            <input type="text" class="form-control" formControlName="job">
+        </div>  
+        <div class="form-group">
+            <label for="tasks">Tareas desarrolladas:</label><br>
+            <input type="text" class="form-control" formControlName="tasks" ><br>
+        </div>
+        <button type="submit" onclick='addExp2()'>Agregar</button>
+    </form>
+        
+    <ul id="exps">
+        <li class="row art artExp" *ngFor="let job of myJobs">
+            <div class="col-2">
+                <img [src]="job.logo" class="logo">
+            </div>
+            <div class="col info">
+                <div class="edit">
+                    <p class="title">{{job.name}}</p>
+                    <div class="buttons">
+                        <button type="submit" class="btn-edit" (click)="deleteExp(job.idJob)">
+                            <img src="https://i.ibb.co/d07JS50/del.png" alt="edit" class="icon-edit">
+                        </button>
+                        <button class="btn-edit btnEditExp" (click)="showEditExp(this.editExpForm, job.idJob)" onclick="showEditExp(this)">
+                            <img src="https://i.ibb.co/2sDL77H/edit.png" alt="edit" class="icon-edit">
+                        </button>
+                    </div>
+                </div>
+                <p>Desde: {{job.dateFrom}} - Hasta: {{job.dateTo}}</p>
+                <p>{{job.job}}</p>
+                <p>{{job.tasks}}</p>
+            </div>
+            <div>
+                <form [formGroup]="editExpForm" (ngSubmit)="editExp(this.editExpForm.value, job.idJob)" class="editExpForm">
+                    <div class="form-group">
+                        <label for="logo">Url del logo de la empresa:</label><br>
+                        <input type="text"  class="form-control" formControlName="logo" [placeholder]="job.logo">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nombre de la empresa:</label><br>
+                        <input type="text" class="form-control" formControlName="name" [placeholder]="job.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateFrom">Fecha de inicio:</label><br>
+                        <input type="date" class="form-control"  formControlName="dateFrom" [placeholder]="job.dateFrom">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateTo">Fecha de fin:</label><br>
+                        <input type="date" class="form-control"  formControlName="dateTo" [placeholder]="job.dateTo">
+                    </div>
+                    <div class="form-group">
+                        <label for="job">Nombre del puesto:</label><br>
+                        <input type="text" class="form-control" formControlName="job" [placeholder]="job.job">
+                    </div>  
+                    <div class="form-group">
+                        <label for="tasks">Tareas desarrolladas:</label><br>
+                        <input type="text" class="form-control" formControlName="tasks" [placeholder]="job.tasks"><br>
+                    </div>
+                    <button type="submit" onclick='hideEditExp(this)' class="btnEditExp2">Editar</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</section>

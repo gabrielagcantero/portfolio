@@ -10,15 +10,15 @@ export class EducationsService {
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('https://cantero-portfolio-back.herokuapp.com/show/edus');
+    return this.http.get('http://localhost:8080/show/edus');
   }
 
   addEducation2(form: any):Observable<any>{
-    return this.http.post('https://cantero-portfolio-back.herokuapp.com/add/education', form);
+    return this.http.post('http://localhost:8080/add/education', form);
   }
 
   editEducation2(form: any, id:any):Observable<any>{
-    return this.http.put('https://cantero-portfolio-back.herokuapp.com/edit/education/?idEducation=' + id, form);
+    return this.http.put('http://localhost:8080/edit/education/?idEducation=' + id, form);
   }
 
   deleteEducation2(id:String):Observable<any>{
@@ -28,6 +28,6 @@ export class EducationsService {
       }),
       body: id
     }
-    return this.http.delete('https://cantero-portfolio-back.herokuapp.com/delete/education', options);
+    return this.http.delete('http://localhost:8080/delete/education', options);
   }
 }
